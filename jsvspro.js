@@ -48,16 +48,16 @@
         }
     }
 
-    function geraAppUrl(){
+      function geraAppUrl(){
         var numero = Math.floor(Math.random() * listaURL.length);
-        var abc = '123456789qwertyuiopasdfghjklzxcvbnm'.split('');
+        var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
-        for(var i = 0; i < 3 ; i++){
+        for(var i = 0; i < 1 ; i++){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
         if (ur.value.includes('qu.ax/')){
-            return 'https://'+listaURL[numero]+'.blogspot.com/?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
+            return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
         }
         return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?id='+btoa(ur.value.replace('https://','').replace('http://',''));
     }
