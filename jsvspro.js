@@ -1,26 +1,4 @@
-/* <script>
-var listaURL = [
-                'q-grup',
-                'cnbsite',
-                'site-qu',
-                'cbnvs',
-                'cbn-vs',
-                'apicbn',
-                'yousite',
-                'siteyiu',
-                'gamesvs',
-                'likscbn'
-                'quxai'
-            ];
-
-</script>
-  <script src='https://cbnnetx.github.io/js/jsvspro.js'/>
-  <div style="display:none;">
-    <script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-</div> */
-
-
-    const u = window.location.href;
+ const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -64,7 +42,7 @@ var listaURL = [
                 //v.src='https://'+atob(vv);
             }
             v.play();
-            setInterval(()=>{
+            setTimeout(() => {
             v.pause();
             },500);
         }
