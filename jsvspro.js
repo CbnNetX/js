@@ -39,7 +39,7 @@
             }else {
                 q = getUrl.searchParams.get("id");
                 vv = decodeURI(q.replaceAll('ii7',''));
-                //v.src='https://'+atob(vv);
+                v.src='https://'+atob(vv);
             }
             v.play();
             setTimeout(() => {
