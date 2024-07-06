@@ -52,7 +52,7 @@
         var numero = Math.floor(Math.random() * listaURL.length);
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
-        for(var i = 0; i < 1 ; i++){
+        for(var i = 0; i < 2 ; i++){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
