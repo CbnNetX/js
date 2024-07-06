@@ -41,9 +41,9 @@
                 vv = decodeURI(q.replaceAll('ii7',''));
                 v.src='https://'+atob(vv);
             }
-            v.play();
+           // v.play();
             setTimeout(() => {
-            v.pause();
+           // v.pause();
             },500);
         }
     }
