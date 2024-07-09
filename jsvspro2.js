@@ -1,4 +1,4 @@
- const u = window.location.href;
+   const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -41,14 +41,10 @@
                 vv = decodeURI(q.replaceAll('ii7',''));
                 v.src='https://'+atob(vv);
             }
-           // v.play();
-            setTimeout(() => {
-           // v.pause();
-            },500);
         }
     }
 
-      function geraAppUrl(){
+    function geraAppUrl(){
         var numero = Math.floor(Math.random() * listaURL.length);
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
@@ -186,6 +182,10 @@
             }else{
                 window.open(atob('aHR0cHM6Ly93aXNzb29ueS5uZXQvNC83NTU5NDE3'));
                 window.location.href="#clickTrue";
+                divx.style.display="none";
+                setTimeout(()=>{
+                divx.style.display="";
+                },1500);
             }
         }
             document.body.appendChild(d);
