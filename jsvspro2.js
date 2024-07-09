@@ -29,7 +29,7 @@
             </style>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
-            <button style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px;" onclick="copyLink()">Copy Link</button>
+            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px;" onclick="copyLink()">Copy Link</button>
             `;
             const v = document.querySelector('#video');
             var getUrl = new URL(u);
@@ -55,6 +55,7 @@
         el.select();
         document.execCommand('copy');
         el.remove();
+        btnCopy.innerText="Link Copiado!";
     }
 
     function geraAppUrl(){
