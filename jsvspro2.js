@@ -1,4 +1,3 @@
-
     const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
@@ -288,7 +287,7 @@
 })();
 
 function ads(){
-    var i = ['PGlmcmFtZSBkYXRhLWFhPScyMzMwNDE1JyBzcmM9Jy8vYWQuYS1hZHMuY29tLzIzMzA0MTU/c2l6ZT05NzB4OTAnIHN0eWxlPSd3aWR0aDoxMDAlOyBoZWlnaHQ6YXV0bzsgYm9yZGVyOjBweDsgcGFkZGluZzowOyBvdmVyZmxvdzpoaWRkZW47IGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Oyc+PC9pZnJhbWU+','PGRpdiBzdHlsZT0icGFkZGluZzogM3B4OyB3aWR0aDogYXV0bzsgYm94LXNpemluZzogYm9yZGVyLWJveDsiPjxhIGhyZWY9Imh0dHBzOi8vc29maWxtZS5jbGljay8/YWRzPWEtYWRzbnVuaW1vcyI+PGltZyBzcmM9Imh0dHBzOi8vc29maWxtZS5jbGljay9hc3NldHMvZ2lmL3NvZmlsbWUuZ2lmP2FudWNpb1BhZ289dHJ1ZSI+PC9hPjwvZGl2Pg=='];
+    var i = ['PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoJYXRPcHRpb25zID0gewoJCSdrZXknIDogJ2M0ZDUwMzkyNDQzMDk1ODAxZDk2ZjNmMjYwY2YwMTg3JywKCQknZm9ybWF0JyA6ICdpZnJhbWUnLAoJCSdoZWlnaHQnIDogNTAsCgkJJ3dpZHRoJyA6IDMyMCwKCQkncGFyYW1zJyA6IHt9Cgl9Owo8L3NjcmlwdD4KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2M0ZDUwMzkyNDQzMDk1ODAxZDk2ZjNmMjYwY2YwMTg3L2ludm9rZS5qcyI+PC9zY3JpcHQ+','PGRpdiBzdHlsZT0icGFkZGluZzogM3B4OyB3aWR0aDogYXV0bzsgYm94LXNpemluZzogYm9yZGVyLWJveDsiPjxhIGhyZWY9Imh0dHBzOi8vc29maWxtZS5jbGljay8/YWRzPWEtYWRzbnVuaW1vcyI+PGltZyBzcmM9Imh0dHBzOi8vc29maWxtZS5jbGljay9hc3NldHMvZ2lmL3NvZmlsbWUuZ2lmP2FudWNpb1BhZ289dHJ1ZSI+PC9hPjwvZGl2Pg=='];
     const n = Math.floor(Math.random()* i.length);
     return atob(i[n]);
 }
@@ -300,6 +299,16 @@ divAbs.style=`z-index: 2;background: #cacaca; position: fixed; bottom: 0; left: 
 divAbs.innerHTML=`
 <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAds.style.bottom= banerAds.style.bottom === '0px' ? '-14%' : '0px';">X</div>
 <div style="padding: 10px 3px 3px; margin: auto;">
-    ${ads()}
+<script>
+document.write(ads());
+</script>
 </div>`;
 document.body.appendChild(divAbs);
+
+SocialBarAds();
+function SocialBarAds(){
+    var sc = document.createElement('script');
+    sc.getAttribute('tyle','text/javascript');
+    sc.src='//restlesscompeldescend.com/c9/88/d7/c988d79bf7d682154fdcc89691fc13cc.js'
+    document.body.appendChild(sc);
+}
