@@ -1,3 +1,4 @@
+
     const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
@@ -147,7 +148,7 @@
     };
     color();
     return `
-    <div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px;/* font-family: cursive;*/ z-index: 2;">
+    <div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px; /*font-family: cursive;*/ z-index: 2;">
      ${txtads()}
     </div>
     `;
@@ -168,7 +169,7 @@
         case 'it':
             return 'UNISCITI QUI PER ALTRI VIDEO';
         case 'pt':
-            return 'Click AQUÍ PARA MÁS VÍDEOS';
+            return 'CLICK AQUÍ PARA MAIS VÍDEOS';
         case 'ru':
             return 'ПРИСОЕДИНЯЙТЕСЬ ЗДЕСЬ ДЛЯ БОЛЬШЕ ВИДЕО';
         case 'zh':
