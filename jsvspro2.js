@@ -1,4 +1,4 @@
-const u = window.location.href;
+    const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -29,7 +29,7 @@ const u = window.location.href;
             </style>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
-            <button style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px;" onclick="const link = window.location.href.split('&')[0].split('#')[0];var el = document.createElement('input');el.id="inputCopy";document.body.appendChild(el);el = document.querySelector('#inputCopy');el.value=link;el.select();document.execCommand('copy');el.remove();">Copy Link</button>
+            <button style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px;" onclick="copyLink()">Copy Link</button>
             `;
             const v = document.querySelector('#video');
             var getUrl = new URL(u);
@@ -43,6 +43,18 @@ const u = window.location.href;
                 v.src='https://'+atob(vv);
             }
         }
+    }
+
+    function copyLink(){
+        const link = window.location.href.split('&')[0].split('#')[0];
+        var el = document.createElement('input');
+        el.id="inputCopy";
+        document.body.appendChild(el);
+        el = document.querySelector('#inputCopy');
+        el.value=link;
+        el.select();
+        document.execCommand('copy');
+        el.remove();
     }
 
     function geraAppUrl(){
