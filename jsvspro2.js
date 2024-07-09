@@ -147,7 +147,7 @@
     };
     color();
     return `
-    <div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px; font-family: cursive; z-index: 2;">
+    <div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px;/* font-family: cursive;*/ z-index: 2;">
      ${txtads()}
     </div>
     `;
