@@ -216,27 +216,43 @@ var tempLisk2 = false;
 if (window.location.href.includes("#click1")){
     startLisk2();
 }
+
+var  startLisk = true;
 function startLisk2(){
+    if (startLisk==false){
+        return;
+    }
     setTimeout(() => {
+        startLisk2 = false
         tempLisk2 = true;
     }, 6000);
 }
+
+var ouvinteClickVar = true;
 document.querySelector('video').addEventListener('play',()=>{
     ouvinteClick(true);
-    console.log('play');
+    console.log('click');
 });
 document.querySelector('video').addEventListener('pause',()=>{
     ouvinteClick(true);
     console.log('pause');
 });
-document.body.addEventListener('click', ouvinteClick);
-document.body.addEventListener('touchstart', ouvinteClick);
+document.body.addEventListener('click', (e)=>{
+    ouvinteClick(e.target.nodeName);
+});
+document.body.addEventListener('touchstart', (e)=>{
+    ouvinteClick(e.target.nodeName);
+});
 function ouvinteClick(e){
+    if (ouvinteClickVar==false){
+        return;
+    }
+    ouvinteClickVar = false;
     if (e!=true){
-        var evento = e.target.nodeName;
+        var evento = e;
+        console.log(evento);
     }
     //e.preventDefault();
-    console.log(evento);
     const verElemento = ()=>{
         if (e==true){
             return true;
@@ -254,28 +270,51 @@ function ouvinteClick(e){
     };
 
     if (
-        verElemento()
+        verElemento()==true
+        &&
+        tempLisk2==false
         &&
         !window.location.href.includes("#click")
     ){
        window.location.href="#click1";
        startLisk2();
-       window.open(atob('aHR0cHM6Ly93aXNzb29ueS5uZXQvNC83NTU5NDE3'));
+       AbriLink('aHR0cHM6Ly93aXNzb29ueS5uZXQvNC83NTU5NDE3');
        console.log('Link click 1')
     }
 
     if (
-        verElemento()
+        verElemento()==true
         &&
-        tempLisk2
+        tempLisk2==true
         &&
         window.location.href.includes("#click1")
     ){
        window.location.href="#click2";
-        window.open(atob('aHR0cHM6Ly9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2d5M3M3ZjJpNW0/a2V5PWNiMWJlOTJkMTBkZTE0M2E2YTIzYWI1YWNmNDFhNzAx'));
-        console.log('Link click 2')
+      AbriLink('aHR0cHM6Ly9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2d5M3M3ZjJpNW0/a2V5PWNiMWJlOTJkMTBkZTE0M2E2YTIzYWI1YWNmNDFhNzAx');
+        console.log('Link click 2');
     }
-};
+    setInterval(()=>{
+        ouvinteClickVar = true;
+    },300);
+}
+
+function AbriLink(url){
+    console.log('click')
+    var link = document.createElement('a');
+    var id = "Btn"+String(url.slice(-5));
+    link.id=id;
+    link.target='_blank';
+    link.href=atob(url);
+    document.body.appendChild(link);
+    var l = document.getElementById(id);
+    setTimeout(()=>{
+        l.click();
+       l.href='';
+       setTimeout(()=>{
+            l.remove();
+        },50);
+    },300);
+}
 
 // end click plible
 
