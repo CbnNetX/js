@@ -303,7 +303,7 @@ divAbs.innerHTML=`
 </div>`;
 document.body.appendChild(divAbs);
 
-SocialBarAds();
+//SocialBarAds();
 function SocialBarAds(){
     var sc = document.createElement('script');
     sc.getAttribute('tyle','text/javascript');
