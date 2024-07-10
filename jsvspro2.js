@@ -25,6 +25,7 @@
             }
             video {
                 width: 100%;
+                height: auto;
             }
             </style>
             ${textAds()}
@@ -71,86 +72,6 @@
             return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
         }
         return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?id='+btoa(ur.value.replace('https://','').replace('http://',''));
-    }
-
-    function textAds(){
-        var liks = ()=>{
-            var link = ['https://restlesscompeldescend.com/yxqu3duem?key=d42dccfdf704495abd850925c314fdf4','https://puckargeez.net/4/6241084'];
-            var n = Math.floor(Math.random()* link.length);
-            return link[n];
-        };
-    const txtads = ()=>{
-    var txt = [
-    `<p class="p-ads">Quer ganhar dinheiro na internet em 30 dias? <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Descubra como ganhar R$1000 online facilmente. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Transforme seu tempo livre em dinheiro! <a href="${liks()}">Clique aqui</a> para saber como.<p>`,
-    `<p class="p-ads">Ganhe dinheiro com apenas alguns cliques. <a href="${liks()}">Saiba mais aqui!<p>`,
-    `<p class="p-ads">Aprenda o segredo para ganhar dinheiro online. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Quer ganhar dinheiro extra sem sair de casa? <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Descubra como ganhar dinheiro rápido e fácil na internet. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Ganhe dinheiro todos os dias com nosso método exclusivo. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Aumente sua renda online em apenas 30 dias. Saiba como <a href="${liks()}">Clique aqui!</a>!<p>`,
-    `<p class="p-ads">Ganhe dinheiro online hoje mesmo. <a href="${liks()}">Clique para começar!<p>`,
-    `<p class="p-ads">Transforme seu tempo livre em renda extra. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Aprenda a ganhar dinheiro na internet de forma simples. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Descubra como ganhar dinheiro online sem investimentos. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Ganhe dinheiro com seu smartphone. <a href="${liks()}">Clique aqui</a> para saber como!<p>`,
-    `<p class="p-ads">Quer saber como ganhar dinheiro enquanto dorme? <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Faça seu dinheiro trabalhar por você. Descubra como <a href="${liks()}">Clique aqui!</a>!<p>`,
-    `<p class="p-ads">Ganhe R$500 por semana com nosso método comprovado. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Aumente sua renda com nosso guia online. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Descubra a maneira mais fácil de ganhar dinheiro na internet. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Transforme suas horas vagas em lucro. <a href="${liks()}">Clique aqui</a> para saber mais!<p>`,
-    `<p class="p-ads">Não perca a chance de ganhar dinheiro fácil na internet. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Quer aumentar sua renda rapidamente? Descubra como <a href="${liks()}">aqui!</a><p>`,
-    `<p class="p-ads">Ganhe dinheiro online de forma surpreendente. <a href="${liks()}">Clique aqui!</a> e veja como!<p>`,
-    `<p class="p-ads">Descubra o segredo para uma vida financeira tranquila. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Transforme seu sonho de ganhar dinheiro online em realidade. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Liberte-se das dívidas com nossa solução online. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Ganhe dinheiro com métodos que realmente funcionam. <a href="${liks()}">Saiba mais aqui!<p>`,
-    `<p class="p-ads">Veja como você pode ganhar dinheiro todos os dias. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Encontre a liberdade financeira que você sempre quis. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Não espere mais! Ganhe dinheiro na internet hoje mesmo. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Descubra uma nova maneira de ganhar dinheiro sem sair de casa. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Transforme sua rotina em uma fonte de renda. <a href="${liks()}">Clique</a> para saber como!<p>`,
-    `<p class="p-ads">Ganhe dinheiro de um jeito que você nunca imaginou. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Saiba como ganhar dinheiro online e realizar seus sonhos. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Desfrute de uma renda extra sem esforço. <a href="${liks()}">Clique aqui!</a> para descobrir como!<p>`,
-    `<p class="p-ads">Mudança de vida com um clique: ganhe dinheiro online. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Dê o primeiro passo para sua independência financeira. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Não perca tempo! Comece a ganhar dinheiro online hoje. <a href="${liks()}">Clique aqui!</a><p>`,
-    `<p class="p-ads">Realize seus desejos financeiros com nosso método. <a href="${liks()}">Clique agora!</a><p>`,
-    `<p class="p-ads">Transforme cada clique em uma oportunidade de lucro. <a href="${liks()}">Saiba mais aqui!<p>`,
-    ];
-    var n = Math.floor(Math.random()* txt.length);
-    return txt[n];
-    }
-    var bg;
-    var clr;
-    const color = ()=>{
-        var i = [0,1,2,3];
-        var n = Math.floor(Math.random()* i.length);
-        i = i[n];
-        if (i==0){
-            bg = '#008000';
-            clr = '#FFFFFF';
-        }else if (i==1){
-            bg = '#FFD700';
-            clr = '#000000'
-        }else if (i==2){
-            bg = '#6868d0';
-            clr = '#FFFFFF';
-        }else if (i==3){
-            bg = '#C0C0C0';
-            clr = '#000000';
-        }
-    };
-    color();
-    return `
-    <div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px; /*font-family: cursive;*/ z-index: 2;">
-     ${txtads()}
-    </div>
-    `;
     }
 
     function getVideos() {
@@ -261,7 +182,8 @@
         return 'JOIN HERE FOR MORE VIDEOS'; 
  }
 }
-(function(){
+// click plib
+/*(function(){
     //setTimeout(()=>{
         if (window.location.href.includes('#clickTrue2')){
             return;
@@ -285,6 +207,142 @@
         }
             document.body.appendChild(d);
 })();
+*/
+
+// ads
+
+// click pluble
+var tempLisk2 = false;
+if (window.location.href.includes("#click1")){
+    startLisk2();
+}
+function startLisk2(){
+    setTimeout(() => {
+        tempLisk2 = true;
+    }, 6000);
+}
+document.body.onclick=(e)=>{
+    var evento = e.target.nodeName;
+    //e.preventDefault();
+
+    const verElemento = ()=>{
+        if (
+            !evento.includes('IMG')
+            &&
+            !evento.includes('A')
+            &&
+            !evento.includes('BUTTON')
+        ){
+            return true;
+        }
+        return false
+    };
+
+    if (
+        verElemento()
+        &&
+        !window.location.href.includes("#click")
+    ){
+       window.location.href="#click1";
+       startLisk2();
+       window.open(atob('aHR0cHM6Ly93aXNzb29ueS5uZXQvNC83NTU5NDE3'));
+       console.log('Link click 1')
+    }
+
+    if (
+        verElemento()
+        &&
+        tempLisk2
+        &&
+        window.location.href.includes("#click1")
+    ){
+       window.location.href="#click2";
+        window.open(atob('aHR0cHM6Ly9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2d5M3M3ZjJpNW0/a2V5PWNiMWJlOTJkMTBkZTE0M2E2YTIzYWI1YWNmNDFhNzAx'));
+        console.log('Link click 2')
+    }
+};
+
+// end click plible
+
+function textAds(){
+    var liks = ()=>{
+        var link = ['https://restlesscompeldescend.com/yxqu3duem?key=d42dccfdf704495abd850925c314fdf4','https://puckargeez.net/4/6241084'];
+        var n = Math.floor(Math.random()* link.length);
+        return link[n];
+    };
+const txtads = ()=>{
+var txt = [
+`<p class="p-ads">Quer ganhar dinheiro na internet em 30 dias? <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Descubra como ganhar R$1000 online facilmente. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Transforme seu tempo livre em dinheiro! <a href="${liks()}">Clique aqui</a> para saber como.<p>`,
+`<p class="p-ads">Ganhe dinheiro com apenas alguns cliques. <a href="${liks()}">Saiba mais aqui!<p>`,
+`<p class="p-ads">Aprenda o segredo para ganhar dinheiro online. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Quer ganhar dinheiro extra sem sair de casa? <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Descubra como ganhar dinheiro rápido e fácil na internet. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Ganhe dinheiro todos os dias com nosso método exclusivo. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Aumente sua renda online em apenas 30 dias. Saiba como <a href="${liks()}">Clique aqui!</a>!<p>`,
+`<p class="p-ads">Ganhe dinheiro online hoje mesmo. <a href="${liks()}">Clique para começar!<p>`,
+`<p class="p-ads">Transforme seu tempo livre em renda extra. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Aprenda a ganhar dinheiro na internet de forma simples. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Descubra como ganhar dinheiro online sem investimentos. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Ganhe dinheiro com seu smartphone. <a href="${liks()}">Clique aqui</a> para saber como!<p>`,
+`<p class="p-ads">Quer saber como ganhar dinheiro enquanto dorme? <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Faça seu dinheiro trabalhar por você. Descubra como <a href="${liks()}">Clique aqui!</a>!<p>`,
+`<p class="p-ads">Ganhe R$500 por semana com nosso método comprovado. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Aumente sua renda com nosso guia online. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Descubra a maneira mais fácil de ganhar dinheiro na internet. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Transforme suas horas vagas em lucro. <a href="${liks()}">Clique aqui</a> para saber mais!<p>`,
+`<p class="p-ads">Não perca a chance de ganhar dinheiro fácil na internet. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Quer aumentar sua renda rapidamente? Descubra como <a href="${liks()}">aqui!</a><p>`,
+`<p class="p-ads">Ganhe dinheiro online de forma surpreendente. <a href="${liks()}">Clique aqui!</a> e veja como!<p>`,
+`<p class="p-ads">Descubra o segredo para uma vida financeira tranquila. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Transforme seu sonho de ganhar dinheiro online em realidade. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Liberte-se das dívidas com nossa solução online. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Ganhe dinheiro com métodos que realmente funcionam. <a href="${liks()}">Saiba mais aqui!<p>`,
+`<p class="p-ads">Veja como você pode ganhar dinheiro todos os dias. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Encontre a liberdade financeira que você sempre quis. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Não espere mais! Ganhe dinheiro na internet hoje mesmo. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Descubra uma nova maneira de ganhar dinheiro sem sair de casa. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Transforme sua rotina em uma fonte de renda. <a href="${liks()}">Clique</a> para saber como!<p>`,
+`<p class="p-ads">Ganhe dinheiro de um jeito que você nunca imaginou. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Saiba como ganhar dinheiro online e realizar seus sonhos. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Desfrute de uma renda extra sem esforço. <a href="${liks()}">Clique aqui!</a> para descobrir como!<p>`,
+`<p class="p-ads">Mudança de vida com um clique: ganhe dinheiro online. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Dê o primeiro passo para sua independência financeira. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Não perca tempo! Comece a ganhar dinheiro online hoje. <a href="${liks()}">Clique aqui!</a><p>`,
+`<p class="p-ads">Realize seus desejos financeiros com nosso método. <a href="${liks()}">Clique agora!</a><p>`,
+`<p class="p-ads">Transforme cada clique em uma oportunidade de lucro. <a href="${liks()}">Saiba mais aqui!<p>`,
+];
+var n = Math.floor(Math.random()* txt.length);
+return txt[n];
+}
+var bg;
+var clr;
+const color = ()=>{
+    var i = [0,1,2,3];
+    var n = Math.floor(Math.random()* i.length);
+    i = i[n];
+    if (i==0){
+        bg = '#008000';
+        clr = '#FFFFFF';
+    }else if (i==1){
+        bg = '#FFD700';
+        clr = '#000000'
+    }else if (i==2){
+        bg = '#6868d0';
+        clr = '#FFFFFF';
+    }else if (i==3){
+        bg = '#C0C0C0';
+        clr = '#000000';
+    }
+};
+color();
+return `
+<div style="background: ${bg}; color: ${clr}; padding: 5px 18px; margin: 5px; border-radius: 4px; /*font-family: cursive;*/ z-index: 2;height: auto;">
+ ${txtads()}
+</div>
+`;
+}
 
 function ads(){
     var i = ['PGlmcmFtZSBkYXRhLWFhPScyMzMwNDE1JyBzcmM9Jy8vYWQuYS1hZHMuY29tLzIzMzA0MTU/c2l6ZT05NzB4OTAnIHN0eWxlPSd3aWR0aDoxMDAlOyBoZWlnaHQ6YXV0bzsgYm9yZGVyOjBweDsgcGFkZGluZzowOyBvdmVyZmxvdzpoaWRkZW47IGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Oyc+PC9pZnJhbWU+','PGRpdiBzdHlsZT0icGFkZGluZzogM3B4OyB3aWR0aDogYXV0bzsgYm94LXNpemluZzogYm9yZGVyLWJveDsiPjxhIGhyZWY9Imh0dHBzOi8vc29maWxtZS5jbGljay8/YWRzPWEtYWRzbnVuaW1vcyI+PGltZyBzcmM9Imh0dHBzOi8vc29maWxtZS5jbGljay9hc3NldHMvZ2lmL3NvZmlsbWUuZ2lmP2FudWNpb1BhZ289dHJ1ZSI+PC9hPjwvZGl2Pg=='];
@@ -292,7 +350,7 @@ function ads(){
     return atob(i[n]);
 }
 
-
+// booton benner
 var divAbs = document.createElement('div');
 divAbs.id="banerAds";
 divAbs.style=`z-index: 2;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
@@ -302,11 +360,13 @@ divAbs.innerHTML=`
     ${ads()}
 </div>`;
 document.body.appendChild(divAbs);
+// end booton
 
-//SocialBarAds();
+//SocialBarAds()
 function SocialBarAds(){
     var sc = document.createElement('script');
     sc.getAttribute('tyle','text/javascript');
     sc.src='//restlesscompeldescend.com/c9/88/d7/c988d79bf7d682154fdcc89691fc13cc.js'
     document.body.appendChild(sc);
 }
+// end ads
