@@ -221,10 +221,12 @@ function startLisk2(){
         tempLisk2 = true;
     }, 6000);
 }
-document.body.onclick=(e)=>{
+document.body.addEventListener('click', ouvinteClick);
+document.body.addEventListener('touchstart', ouvinteClick);
+function ouvinteClick(e){
     var evento = e.target.nodeName;
     //e.preventDefault();
-
+    console.log(evento);
     const verElemento = ()=>{
         if (
             !evento.includes('IMG')
