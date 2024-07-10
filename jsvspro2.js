@@ -1,4 +1,4 @@
-    const u = window.location.href;
+   const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -221,13 +221,26 @@ function startLisk2(){
         tempLisk2 = true;
     }, 6000);
 }
+document.querySelector('video').addEventListener('play',()=>{
+    ouvinteClick(true);
+    console.log('play');
+});
+document.querySelector('video').addEventListener('pause',()=>{
+    ouvinteClick(true);
+    console.log('pause');
+});
 document.body.addEventListener('click', ouvinteClick);
 document.body.addEventListener('touchstart', ouvinteClick);
 function ouvinteClick(e){
-    var evento = e.target.nodeName;
+    if (e!=true){
+        var evento = e.target.nodeName;
+    }
     //e.preventDefault();
     console.log(evento);
     const verElemento = ()=>{
+        if (e==true){
+            return true;
+        }
         if (
             !evento.includes('IMG')
             &&
