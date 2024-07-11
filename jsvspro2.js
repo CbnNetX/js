@@ -420,8 +420,18 @@ document.body.appendChild(divAbs);
 //SocialBarAds()
 function SocialBarAds(){
     var sc = document.createElement('script');
-    sc.getAttribute('tyle','text/javascript');
+    sc.setAttribute('tyle','text/javascript');
     sc.src='//restlesscompeldescend.com/c9/88/d7/c988d79bf7d682154fdcc89691fc13cc.js'
     document.body.appendChild(sc);
 }
 // end ads
+
+noticarADS();
+function noticarADS(){
+    var sc = document.createElement('script');
+    sc.id="ads123";
+    sc.setAttribute('data-cfasync','false');
+    sc.src='https://atshroomisha.com/act/files/tag.min.js?z=7718248';
+    sc.setAttribute('async','');
+    document.head.appendChild(sc);
+}
