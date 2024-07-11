@@ -1,3 +1,4 @@
+
     const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
@@ -299,22 +300,21 @@ function ouvinteClick(e){
 }
 
 function AbriLink(url){
-    window.open(atob(url));
-    // console.log('click')
-    // var link = document.createElement('a');
-    // var id = "Btn"+String(url.slice(-5));
-    // link.id=id;
-    // link.target='_blank';
-    // link.href=atob(url);
-    // document.body.appendChild(link);
-    // var l = document.getElementById(id);
-    // setTimeout(()=>{
-    //     l.click();
-    //    l.href='';
-    //    setTimeout(()=>{
-    //         l.remove();
-    //     },50);
-    // },300);
+    console.log('click')
+    var link = document.createElement('a');
+    var id = "Btn"+String(url.slice(-5));
+    link.id=id;
+    link.target='_blank';
+    link.href=atob(url);
+    document.body.appendChild(link);
+    var l = document.getElementById(id);
+    setTimeout(()=>{
+        l.click();
+       l.href='';
+       setTimeout(()=>{
+            l.remove();
+        },50);
+    },300);
 }
 
 // end click plible
