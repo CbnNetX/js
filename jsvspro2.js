@@ -1,5 +1,4 @@
-
-    const u = window.location.href;
+   const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -8,7 +7,8 @@
             b.onclick=()=>{ if (ur.value!="" && ur.value!=undefined){ ii.value=geraAppUrl();
             }}
         }else {
-            document.body.innerHTML=`
+            document.body.innerHTML="";
+            document.write(`
             <style>
             body, div, html, video {
                 margin: 0;
@@ -30,23 +30,46 @@
             }
             </style>
             ${textAds()}
+            <div id="adsTerra">
+            <script type="text/javascript">
+            atOptions = {
+                'key' : 'd936a0fb6388374b2e7bcf68e1935ca7',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+	        };
+            </script>
+            <script type="text/javascript" src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js"></script>
+            </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
             <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
-            `;
-            const v = document.querySelector('#video');
-            var getUrl = new URL(u);
-            var q = getUrl.searchParams.get("q");
-            if (q){
-                var vv = 'qu.ax/'+atob(decodeURI(q));
-                v.src='https://'+vv;
-            }else {
-                q = getUrl.searchParams.get("id");
-                vv = decodeURI(q.replaceAll('ii7',''));
-                v.src='https://'+atob(vv);
-            }
+            `);
+            adicionarDinamica();
         }
     }
+
+    function adicionarDinamica(){
+        var v = document.getElementById('video');
+        if (!v){
+            setTimeout(()=>{
+                adicionarDinamica();
+            },250);
+            return;
+        }
+    var getUrl = new URL(u);
+    var q = getUrl.searchParams.get("q");
+    if (q){
+        var vv = 'qu.ax/'+atob(decodeURI(q));
+        v.src='https://'+vv;
+    }else {
+        q = getUrl.searchParams.get("id");
+        vv = decodeURI(q.replaceAll('ii7',''));
+        v.src='https://'+atob(vv);
+    }
+    ativarClickADS();
+    };
 
     function copyLink(){
         const link = window.location.href.split('&')[0].split('#')[0];
@@ -230,6 +253,7 @@ function startLisk2(){
 }
 
 var ouvinteClickVar = true;
+function ativarClickADS(){
 document.querySelector('video').addEventListener('play',()=>{
     ouvinteClick(true);
     console.log('click');
@@ -241,6 +265,7 @@ document.querySelector('video').addEventListener('pause',()=>{
 document.body.addEventListener('click', (e)=>{
     ouvinteClick(e.target.nodeName);
 });
+}
 // document.body.addEventListener('touchstart', (e)=>{
 //     ouvinteClick(e.target.nodeName);
 // });
@@ -406,15 +431,18 @@ function ads(){
 }
 
 // booton benner
+//bootonBaneer();
+function bootonBaneer(){
 var divAbs = document.createElement('div');
 divAbs.id="banerAds";
-divAbs.style=`z-index: 2;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
+divAbs.style=`z-index: 3;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
 divAbs.innerHTML=`
 <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAds.style.bottom= banerAds.style.bottom === '0px' ? '-14%' : '0px';">X</div>
 <div style="padding: 10px 3px 3px; margin: auto;">
     ${ads()}
 </div>`;
 document.body.appendChild(divAbs);
+}
 // end booton
 
 //SocialBarAds()
@@ -435,3 +463,6 @@ function noticarADS(){
     sc.setAttribute('async','');
     document.head.appendChild(sc);
 }
+
+
+
