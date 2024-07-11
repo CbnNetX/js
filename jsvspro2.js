@@ -241,9 +241,9 @@ document.querySelector('video').addEventListener('pause',()=>{
 document.body.addEventListener('click', (e)=>{
     ouvinteClick(e.target.nodeName);
 });
-document.body.addEventListener('touchstart', (e)=>{
-    ouvinteClick(e.target.nodeName);
-});
+// document.body.addEventListener('touchstart', (e)=>{
+//     ouvinteClick(e.target.nodeName);
+// });
 function ouvinteClick(e){
     if (ouvinteClickVar==false){
         return;
