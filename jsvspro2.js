@@ -44,7 +44,7 @@
             </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
-            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
+            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2999999999999;" onclick="copyLink()">Copy Link</button>
             `);
             adicionarDinamica();
         }
