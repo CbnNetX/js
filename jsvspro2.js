@@ -535,7 +535,7 @@ function SocialBarAds(){
 }
 // end ads
 
-noticarADS();
+//noticarADS();
 function noticarADS(){
     var sc = document.createElement('script');
     sc.id="ads123";
