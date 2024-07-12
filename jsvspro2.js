@@ -1,4 +1,4 @@
-   const u = window.location.href;
+    const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
@@ -68,7 +68,7 @@
         vv = decodeURI(q.replaceAll('ii7',''));
         v.src='https://'+atob(vv);
     }
-    ativarClickADS();
+    //ativarClickADS();
     };
 
     function copyLink(){
@@ -464,5 +464,12 @@ function noticarADS(){
     document.head.appendChild(sc);
 }
 
-
-
+tagsMonetagADS();
+function tagsMonetagADS(){
+    var sc = document.createElement('script');
+    sc.id="ads123";
+    sc.src='https://alwingulla.com/88/tag.min.js';
+    sc.setAttribute('data-zone','78632');
+    sc.setAttribute('data-cfasync','false');
+    document.head.appendChild(sc);
+}
