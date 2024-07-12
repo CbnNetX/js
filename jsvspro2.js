@@ -1,3 +1,84 @@
+/* <script>
+//        var listaURL = ['quaxs',
+'viidess',
+'xxviide',
+'videui',
+'feicoi',
+'qu-xa',
+'cbn-qu','q-grup','x-n0vinha','qu-a1','qu-a2','qu-a3','qu-a4','qu-a5','qu-a6'];
+var listaURL = [
+                'quaxs',
+                'viidess',
+                'xxviide',
+                'videui',
+                'feicoi',
+                'qu-xa',
+                'q-grup',
+                'cnbsite',
+                'site-qu',
+                'cbnvs',
+                'cbn-vs',
+                'apicbn',
+                'qu-a1',
+                'qu-a2',
+                'qu-a3',
+                'qu-a4',
+                'qu-a5',
+                'qu-a6',
+                'yousiite',
+
+                'x-n0vinha',
+                'siteyiu',
+                'ga-m1',
+                'likscbn',
+                'quxai',
+                'qu-x0',
+                ,
+                'qu-x1',
+                'qu-x2',
+                'qu-x3',
+                'qu-x4',
+                'qu-x5',
+
+                'qu-x6',
+                'qu-x7',
+                'qu-x8',
+                'qu-x9',
+
+                'cbnq1',
+
+                'cbnq2',
+                'cbnq3',
+                'cbnq4',
+                'cbnq5',
+                'cbnq6',
+
+               // 'cbnq7',
+
+                'cbnq8',
+                'cbnq9',
+                'cbnx1',
+                'cbnx3',
+                'cbnx4',
+
+                'cbnq2s',
+                'cbnq3s',
+                'cbnq4s',
+                'cbnq5s',
+                'cbnq6s'
+
+
+            ];
+
+</script>
+
+<script src='https://cbnnetx.github.io/js/jsvspro2.js'/>
+<div style="display:none;">
+<script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+</div>
+ */
+
+
     const u = window.location.href;
     if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
@@ -31,11 +112,20 @@
             </style>
             ${textAds()}
             <div id="adsTerra">
-           
+            <script type="text/javascript">
+            atOptions = {
+                'key' : 'd936a0fb6388374b2e7bcf68e1935ca7',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+	        };
+            </script>
+            <script type="text/javascript" src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js"></script>
             </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
-            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2999999999999;" onclick="copyLink()">Copy Link</button>
+            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 299999999999999;" onclick="copyLink()">Copy Link</button>
             `);
             adicionarDinamica();
         }
@@ -59,7 +149,7 @@
         vv = decodeURI(q.replaceAll('ii7',''));
         v.src='https://'+atob(vv);
     }
-    //ativarClickADS();
+    ativarClickADS();
     };
 
     function copyLink(){
@@ -79,7 +169,7 @@
         var numero = Math.floor(Math.random() * listaURL.length);
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
-        for(var i = 0; i < 3 ; i++){
+        for(var i = 0; i < 2 ; i++){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
@@ -455,7 +545,7 @@ function noticarADS(){
     document.head.appendChild(sc);
 }
 
-tagsMonetagADS();
+//tagsMonetagADS();
 function tagsMonetagADS(){
     var sc = document.createElement('script');
     sc.id="ads123";
@@ -464,3 +554,5 @@ function tagsMonetagADS(){
     sc.setAttribute('data-cfasync','false');
     document.head.appendChild(sc);
 }
+
+
