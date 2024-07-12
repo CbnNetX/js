@@ -31,16 +31,7 @@
             </style>
             ${textAds()}
             <div id="adsTerra">
-            <script type="text/javascript">
-            atOptions = {
-                'key' : 'd936a0fb6388374b2e7bcf68e1935ca7',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-	        };
-            </script>
-            <script type="text/javascript" src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js"></script>
+           
             </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
