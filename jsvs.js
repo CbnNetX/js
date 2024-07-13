@@ -82,6 +82,7 @@ if (u.includes('id=') || u.includes('q=')){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
+        var teg = '';
         if (ur.value.includes('qu.ax/')){
             return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
         }
