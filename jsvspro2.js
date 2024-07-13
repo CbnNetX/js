@@ -1,86 +1,5 @@
-/* <script>
-//        var listaURL = ['quaxs',
-'viidess',
-'xxviide',
-'videui',
-'feicoi',
-'qu-xa',
-'cbn-qu','q-grup','x-n0vinha','qu-a1','qu-a2','qu-a3','qu-a4','qu-a5','qu-a6'];
-var listaURL = [
-                'quaxs',
-                'viidess',
-                'xxviide',
-                'videui',
-                'feicoi',
-                'qu-xa',
-                'q-grup',
-                'cnbsite',
-                'site-qu',
-                'cbnvs',
-                'cbn-vs',
-                'apicbn',
-                'qu-a1',
-                'qu-a2',
-                'qu-a3',
-                'qu-a4',
-                'qu-a5',
-                'qu-a6',
-                'yousiite',
-
-                'x-n0vinha',
-                'siteyiu',
-                'ga-m1',
-                'likscbn',
-                'quxai',
-                'qu-x0',
-                ,
-                'qu-x1',
-                'qu-x2',
-                'qu-x3',
-                'qu-x4',
-                'qu-x5',
-
-                'qu-x6',
-                'qu-x7',
-                'qu-x8',
-                'qu-x9',
-
-                'cbnq1',
-
-                'cbnq2',
-                'cbnq3',
-                'cbnq4',
-                'cbnq5',
-                'cbnq6',
-
-               // 'cbnq7',
-
-                'cbnq8',
-                'cbnq9',
-                'cbnx1',
-                'cbnx3',
-                'cbnx4',
-
-                'cbnq2s',
-                'cbnq3s',
-                'cbnq4s',
-                'cbnq5s',
-                'cbnq6s'
-
-
-            ];
-
-</script>
-
-<script src='https://cbnnetx.github.io/js/jsvspro2.js'/>
-<div style="display:none;">
-<script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-</div>
- */
-
-
-    const u = window.location.href;
-    if (u.includes('id=') || u.includes('q=')){
+const u = window.location.href;
+if (u.includes('id=') || u.includes('q=')){
         if (u.includes('app')){
             setTimeout(()=>{ divx.remove(); },100);
             document.body.innerHTML=atob('IDxkaXYgc3R5bGU9IndpZHRoOiAxMDAlOyBwYWRkaW5nOiAxMHB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogOTglOyBtYXJnaW46IDVweDsgcGFkZGluZzogNXB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyIgdHlwZT0idXJsIiBpZD0idXIiIHBsYWNlaG9sZGVyPSJVUkwiPgogICAgICAgIDxpbnB1dCBzdHlsZT0id2lkdGg6IDk4JTsgbWFyZ2luOiA1cHg7IHBhZGRpbmc6IDVweDsgYm94LXNpemluZzogYm9yZGVyLWJveDsiIHR5cGU9InRleHQiIGlkPSJpaSIgcGxhY2Vob2xkZXI9IlVSTCBGaW5hbCI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogMTAwJTsgbWFyZ2luLWJvdHRvbTogNXB4OyBwYWRkaW5nOiA1cHg7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IiB0eXBlPSJidXR0b24iIGlkPSJiIiB2YWx1ZT0ib2siPgogICAgICAgPC9kaXY+');
@@ -111,17 +30,8 @@ var listaURL = [
             }
             </style>
             ${textAds()}
-            <div id="adsTerra">
-            <script type="text/javascript">
-            atOptions = {
-                'key' : 'd936a0fb6388374b2e7bcf68e1935ca7',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-	        };
-            </script>
-            <script type="text/javascript" src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js"></script>
+            <div>
+            ${ads300x250(true)}
             </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
@@ -543,6 +453,19 @@ function noticarADS(){
     sc.src='https://atshroomisha.com/act/files/tag.min.js?z=7718248';
     sc.setAttribute('async','');
     document.head.appendChild(sc);
+}
+
+// asd banner 300x250
+function ads300x250(banner){
+var l = (navigator.language || navigator.userLanguage).split('-')[0];
+if (l=='en'){
+      return "<div>No Post</div>";
+   }
+   if (banner){
+       return atob('PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgICAgICAgICBhdE9wdGlvbnMgPSB7CiAgICAgICAgICAgICAgICAna2V5JyA6ICdkOTM2YTBmYjYzODgzNzRiMmU3YmNmNjhlMTkzNWNhNycsCiAgICAgICAgICAgICAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgICAgICAgICAgICAgJ2hlaWdodCcgOiAyNTAsCiAgICAgICAgICAgICAgICAnd2lkdGgnIDogMzAwLAogICAgICAgICAgICAgICAgJ3BhcmFtcycgOiB7fQoJICAgICAgICB9OwogICAgICAgICAgICA8L3NjcmlwdD4KICAgICAgICAgICAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2Q5MzZhMGZiNjM4ODM3NGIyZTdiY2Y2OGUxOTM1Y2E3L2ludm9rZS5qcyI+PC9zY3JpcHQ+');
+   }else {
+
+   }
 }
 
 //tagsMonetagADS();
