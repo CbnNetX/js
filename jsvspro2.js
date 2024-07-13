@@ -457,10 +457,6 @@ function noticarADS(){
 
 // asd banner 300x250
 function ads300x250(banner){
-var l = (navigator.language || navigator.userLanguage).split('-')[0];
-if (l=='en'){
-      return "<div>No Post</div>";
-   }
    if (banner){
        return atob('PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgICAgICAgICBhdE9wdGlvbnMgPSB7CiAgICAgICAgICAgICAgICAna2V5JyA6ICdkOTM2YTBmYjYzODgzNzRiMmU3YmNmNjhlMTkzNWNhNycsCiAgICAgICAgICAgICAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgICAgICAgICAgICAgJ2hlaWdodCcgOiAyNTAsCiAgICAgICAgICAgICAgICAnd2lkdGgnIDogMzAwLAogICAgICAgICAgICAgICAgJ3BhcmFtcycgOiB7fQoJICAgICAgICB9OwogICAgICAgICAgICA8L3NjcmlwdD4KICAgICAgICAgICAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9yZXN0bGVzc2NvbXBlbGRlc2NlbmQuY29tL2Q5MzZhMGZiNjM4ODM3NGIyZTdiY2Y2OGUxOTM1Y2E3L2ludm9rZS5qcyI+PC9zY3JpcHQ+');
    }else {
