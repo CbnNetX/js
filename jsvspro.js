@@ -459,16 +459,7 @@ function noticarADS(){
 // asd banner 300x250
 function ads300x250(banner){
 var language = (navigator.language || navigator.userLanguage).split('-')[0];
-var userAgent = navigator.userAgent.toLowerCase();
 if (
-   userAgent.includes('Facebook')
-   ||
-   userAgent.includes('Face')
-   ||
-   userAgent.includes('face')
-   ||
-   userAgent.includes('facebook')
-   ||
    language=='en'
    ){
       return "";
