@@ -313,6 +313,10 @@ function ads(){
 
 // asd banner 300x250
 function ads300x250(banner){
+    var l = (navigator.language || navigator.userLanguage).split('-')[0];
+    if (l=='en'){
+      return "<div><p>No Post</p></div>";
+    }
    if (banner){
        var d = document.getElementById('adsTerra');
        if (!d){
