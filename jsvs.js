@@ -348,9 +348,10 @@ function adsBannes(banner){
 //bootonBaneer();
 function bootonBaneer(){
     var divAbs = document.createElement('div');
+    divAbs.id='banerAdsCloce';
     divAbs.style=`z-index: 3;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
     divAbs.innerHTML=`
-    <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAds.style.bottom= banerAds.style.bottom === '0px' ? '-14%' : '0px';">X</div>
+    <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAdsCloce.style.bottom= banerAdsCloce.style.bottom === '0px' ? '-14%' : '0px';">X</div>
     <div id="bootonAds" style="padding: 10px 3px 3px; display: flex;
     justify-content: center;">
     </div>`;
@@ -396,3 +397,4 @@ function bootonBaneer(){
     };
     adsElement();
 }
+
