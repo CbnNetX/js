@@ -32,7 +32,7 @@ if (u.includes('id=') || u.includes('q=')){
             </div>
             <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
             ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
-            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 299999999999999;" onclick="copyLink()">Copy Link</button>
+            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
             `;
             adicionarDinamica();
         }
@@ -57,7 +57,8 @@ if (u.includes('id=') || u.includes('q=')){
         v.src='https://'+atob(vv);
     }
     ativarClickADS();
-    ads300x250(true);
+    adsBannes(true);
+    adsBannes(false)
     };
 
     function copyLink(){
@@ -312,7 +313,7 @@ function ads(){
 
 
 // asd banner 300x250
-function ads300x250(banner){
+function adsBannes(banner){
     var l = (navigator.language || navigator.userLanguage).split('-')[0];
     if (l=='en'){
       return "<div><p>No Post</p></div>";
@@ -320,7 +321,7 @@ function ads300x250(banner){
    if (banner){
        var d = document.getElementById('adsTerra');
        if (!d){
-        ads300x250(banner);
+        adsBannes(banner);
         return;
        }
        var sc = document.createElement('script');
@@ -337,8 +338,61 @@ function ads300x250(banner){
         sc2.type="text/javascript";
         sc2.src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js";
         d.appendChild(sc2);
-
    }else {
-
+    setTimeout(() => {
+        bootonBaneer();
+    },500);
    }
+}
+
+//bootonBaneer();
+function bootonBaneer(){
+    var divAbs = document.createElement('div');
+    divAbs.style=`z-index: 3;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
+    divAbs.innerHTML=`
+    <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAds.style.bottom= banerAds.style.bottom === '0px' ? '-14%' : '0px';">X</div>
+    <div id="bootonAds" style="padding: 10px 3px 3px; display: flex;
+    justify-content: center;">
+    </div>`;
+    document.body.appendChild(divAbs);
+    // add anucio!
+    const adsElement = ()=>{
+    var ads = document.getElementById('bootonAds');
+    if (!ads){
+        adsElement();
+        return;
+    }
+    var blocoAds = document.createElement('script');
+    blocoAds.type='text/javascript';
+    if (window.innerWidth<700){
+        blocoAds.innerHTML=`
+        atOptions = {
+            'key' : 'c4d50392443095801d96f3f260cf0187',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+        };`;
+    }else {
+        blocoAds.innerHTML=`
+       atOptions = {
+		'key' : 'f5af33a9f1fcbaabd7099b7c3d65a181',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};`;
+    }
+    ads.appendChild(blocoAds);
+    blocoAds = null;
+    blocoAds = document.createElement('script');
+    blocoAds.type='text/javascript';
+    if (window.innerWidth<700){
+    blocoAds.src='//restlesscompeldescend.com/c4d50392443095801d96f3f260cf0187/invoke.js';
+    }else {
+    blocoAds.src='//restlesscompeldescend.com/f5af33a9f1fcbaabd7099b7c3d65a181/invoke.js';
+    }
+    ads.appendChild(blocoAds);
+    };
+    adsElement();
 }
