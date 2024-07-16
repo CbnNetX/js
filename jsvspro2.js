@@ -341,7 +341,7 @@ function adsBannes(banner){
    }else {
     setTimeout(() => {
         bootonBaneer();
-    },500);
+    },1000);
    }
 }
 
