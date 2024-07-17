@@ -50,18 +50,16 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     var q = getUrl.searchParams.get("q");
     if (q){
         var vv = 'qu.ax/'+atob(decodeURI(q));
-        v.src='https://'+vv;
     }
     q = getUrl.searchParams.get("id");
     if(q){
-        vv = decodeURI(q.replaceAll('ii7',''));
-        v.src='https://'+atob(vv);
+        vv = atob(decodeURI(q.replaceAll('ii7','')));
     }
     q = getUrl.searchParams.get("p");
     if(q){
         vv = 'https://qu.ax/'+q+'.mp4';
-        v.src='https://'+atob(vv);
     }
+    v.src=vv;
 
     ativarClickADS();
     adsBannes(true);
