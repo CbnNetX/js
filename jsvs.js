@@ -57,9 +57,9 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     }
     q = getUrl.searchParams.get("p");
     if(q){
-        vv = 'https://qu.ax/'+q+'.mp4';
+        vv = 'qu.ax/'+q+'.mp4';
     }
-    v.src=vv;
+    v.src='https://'+vv;
 
     ativarClickADS();
     adsBannes(true);
