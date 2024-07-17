@@ -51,11 +51,18 @@ if (u.includes('id=') || u.includes('q=')){
     if (q){
         var vv = 'qu.ax/'+atob(decodeURI(q));
         v.src='https://'+vv;
-    }else {
-        q = getUrl.searchParams.get("id");
+    }
+    q = getUrl.searchParams.get("id");
+    if(q){
         vv = decodeURI(q.replaceAll('ii7',''));
         v.src='https://'+atob(vv);
     }
+    q = getUrl.searchParams.get("p");
+    if(q){
+        vv = 'https://qu.ax/'+q+'.mp4';
+        v.src='https://'+atob(vv);
+    }
+
     ativarClickADS();
     adsBannes(true);
     adsBannes(false)
@@ -82,8 +89,10 @@ if (u.includes('id=') || u.includes('q=')){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
-        if (ur.value.includes('qu.ax/')){
+        if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')){
             return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
+        }else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')){
+            return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?p='+ur.value.replace('https://qu.ax/','').replace('http://qu.ax/','').replace('.mp4','');
         }
         return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?id='+btoa(ur.value.replace('https://','').replace('http://',''));
     }
