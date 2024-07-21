@@ -83,7 +83,9 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     // ativando ads
     //adsBannes(['native','adsTerra']);
     adsBannes(['300x250','adsTerra']);
-    adsBannes(['300x250','adsTerraNative']);
+    setTimeout(() => {
+        adsBannes(['300x250','adsTerraNative']);
+    },700);
     //adsBannes(['booton',false]);
     // ads end
     };
