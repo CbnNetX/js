@@ -81,7 +81,8 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
 
     ativarClickADS();
     // ativando ads
-    adsBannes(['native','adsTerra']);
+    //adsBannes(['native','adsTerra']);
+    adsBannes(['300x250','adsTerra']);
     adsBannes(['300x250','adsTerraNative']);
     //adsBannes(['booton',false]);
     // ads end
@@ -439,3 +440,4 @@ function bootonBaneer(){
     };
     adsElement();
 }
+
