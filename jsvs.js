@@ -1,8 +1,19 @@
 const u = window.location.href;
 if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
         if (u.includes('app')){
-            setTimeout(()=>{ divx.remove(); },100);
-            document.body.innerHTML=atob('IDxkaXYgc3R5bGU9IndpZHRoOiAxMDAlOyBwYWRkaW5nOiAxMHB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogOTglOyBtYXJnaW46IDVweDsgcGFkZGluZzogNXB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyIgdHlwZT0idXJsIiBpZD0idXIiIHBsYWNlaG9sZGVyPSJVUkwiPgogICAgICAgIDxpbnB1dCBzdHlsZT0id2lkdGg6IDk4JTsgbWFyZ2luOiA1cHg7IHBhZGRpbmc6IDVweDsgYm94LXNpemluZzogYm9yZGVyLWJveDsiIHR5cGU9InRleHQiIGlkPSJpaSIgcGxhY2Vob2xkZXI9IlVSTCBGaW5hbCI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogMTAwJTsgbWFyZ2luLWJvdHRvbTogNXB4OyBwYWRkaW5nOiA1cHg7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IiB0eXBlPSJidXR0b24iIGlkPSJiIiB2YWx1ZT0ib2siPgogICAgICAgPC9kaXY+');
+            setTimeout(()=>{ 
+                if(document.getElementById('divx')){ 
+                    divx.remove(); 
+                } 
+            },100);
+            document.body.innerHTML=`
+            <div style="width: 100%; padding: 10px; box-sizing: border-box;" bis_skin_checked="1">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="url" id="ur" placeholder="URL">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="text" id="ii" placeholder="URL Final">
+             ${inputSelect()}
+            <input style="width: 100%; margin-bottom: 5px; padding: 5px; box-sizing: border-box;" type="button" id="b" value="ok">
+             </div>
+             `;
             document.body.onclick="";
             b.onclick=()=>{ if (ur.value!="" && ur.value!=undefined){ ii.value=geraAppUrl();
             }}
@@ -44,7 +55,7 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
             </style>
             <div id="adsTerra">
             </div>
-            <a href='//www.facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 2;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
+            <a href='//facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 2;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
             <div id='videoBox'>
             <video id="video" src="" controls></video>
             </div>
@@ -104,7 +115,11 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     }
 
     function geraAppUrl(){
-        var numero = Math.floor(Math.random() * listaURL.length);
+        if (select && select.value==''){
+            var numero = Math.floor(Math.random() * listaURL.length);
+        }else{
+            var numero = select.value
+        }
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
         for(var i = 0; i < 2 ; i++){
@@ -388,6 +403,20 @@ function adsBannes(banner){
         bootonBaneer();
     },1000);
    }
+}
+
+function inputSelect(){
+    if (!listaURL){
+        return;
+    }
+    var inputSelect = `<select id="select" style="margin: 8px 0; width: 100%;">
+    <option value="">Select Dominio</option>`;
+    listaURL.forEach((item, index )=>{
+        inputSelect+=`<option value="${index}">Select ${item}</option>`;
+    });
+    inputSelect+='</select>';
+    return inputSelect;
+    
 }
 
 //bootonBaneer();
