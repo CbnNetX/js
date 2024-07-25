@@ -44,7 +44,7 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
             </style>
             <div id="adsTerra">
             </div>
-            <a href='fb://group/1925174917947482/members' style='width: auto;padding: 5px;z-index: 2;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
+            <a href='//www.facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 2;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
             <div id='videoBox'>
             <video id="video" src="" controls></video>
             </div>
