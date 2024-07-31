@@ -90,7 +90,7 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     }
     v.src='https://'+vv;
 
-    ativarClickADS();
+  //  ativarClickADS();
     // ativando ads
     //adsBannes(['native','adsTerra']);
     adsBannes(['300x250','adsTerra']);
