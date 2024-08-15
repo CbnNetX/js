@@ -1,8 +1,19 @@
 const u = window.location.href;
-if (u.includes('id=') || u.includes('q=')){
+if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
         if (u.includes('app')){
-            setTimeout(()=>{ divx.remove(); },100);
-            document.body.innerHTML=atob('IDxkaXYgc3R5bGU9IndpZHRoOiAxMDAlOyBwYWRkaW5nOiAxMHB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogOTglOyBtYXJnaW46IDVweDsgcGFkZGluZzogNXB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94OyIgdHlwZT0idXJsIiBpZD0idXIiIHBsYWNlaG9sZGVyPSJVUkwiPgogICAgICAgIDxpbnB1dCBzdHlsZT0id2lkdGg6IDk4JTsgbWFyZ2luOiA1cHg7IHBhZGRpbmc6IDVweDsgYm94LXNpemluZzogYm9yZGVyLWJveDsiIHR5cGU9InRleHQiIGlkPSJpaSIgcGxhY2Vob2xkZXI9IlVSTCBGaW5hbCI+CiAgICAgICAgPGlucHV0IHN0eWxlPSJ3aWR0aDogMTAwJTsgbWFyZ2luLWJvdHRvbTogNXB4OyBwYWRkaW5nOiA1cHg7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IiB0eXBlPSJidXR0b24iIGlkPSJiIiB2YWx1ZT0ib2siPgogICAgICAgPC9kaXY+');
+            setTimeout(()=>{ 
+                if(document.getElementById('divx')){ 
+                    divx.remove(); 
+                } 
+            },100);
+            document.body.innerHTML=`
+            <div style="width: 100%; padding: 10px; box-sizing: border-box;" bis_skin_checked="1">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="url" id="ur" placeholder="URL">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="text" id="ii" placeholder="URL Final">
+             ${inputSelect()}
+            <input style="width: 100%; margin-bottom: 5px; padding: 5px; box-sizing: border-box;" type="button" id="b" value="ok">
+             </div>
+             `;
             document.body.onclick="";
             b.onclick=()=>{ if (ur.value!="" && ur.value!=undefined){ ii.value=geraAppUrl();
             }}
@@ -16,23 +27,41 @@ if (u.includes('id=') || u.includes('q=')){
             body {
                 font-size: 18px;
                 font-weight: 500;
-                margin: 5px;
+                margin: 0 5px 80px;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                color: #fff;
+                background: #111;
+
             }
-            video {
+            video{
+                width: 100%;
+            }
+            #videoBox {
+                display: flex;
+                justify-content: center;
                 width: 100%;
                 height: auto;
+            }
+            @media (min-width:400px){
+             #videoBox {
+               flex-direction: column;
+               width:  50%;
+            }
             }
             </style>
             <div id="adsTerra">
             </div>
-            <a href='https://m.facebook.com/groups/1925174917947482/?ref=share&mibextid=NSMWBT' style='width: 100%; padding: 5px; z-index: 2;'>&#10084;💕${getVideos()}😘👌</a>
-            ${atob('PHZpZGVvIGlkPSJ2aWRlbyIgc3JjPSIiIGNvbnRyb2xzPjwvdmlkZW8+')}
+            <a href='//facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 2;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
+            <div id='videoBox'>
+            <video id="video" src="" controls></video>
+            </div>
             <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
+            <div id="adsTerraNative">
+            </div>
             `;
             adicionarDinamica();
         }
@@ -50,15 +79,33 @@ if (u.includes('id=') || u.includes('q=')){
     var q = getUrl.searchParams.get("q");
     if (q){
         var vv = 'qu.ax/'+atob(decodeURI(q));
-        v.src='https://'+vv;
-    }else {
-        q = getUrl.searchParams.get("id");
-        vv = decodeURI(q.replaceAll('ii7',''));
-        v.src='https://'+atob(vv);
     }
-    ativarClickADS();
-    adsBannes(true);
-    adsBannes(false)
+    q = getUrl.searchParams.get("id");
+    if(q){
+        vv = atob(decodeURI(q.replaceAll('ii7','')));
+    }
+    q = getUrl.searchParams.get("p");
+    if(q){
+        vv = 'qu.ax/'+q+'.mp4';
+    }
+    v.src='https://'+vv;
+
+   // ativarClickADS();
+    // ativando ads
+    //adsBannes(['native','adsTerra']);
+
+   // adsBannes(['300x250','adsTerra']);
+
+    setTimeout(() => {
+
+        //adsBannes(['300x250','adsTerraNative']);
+        
+    },1000);
+    //adsBannes(['booton',false]);
+    // ads end
+
+    adsTrroPopunder();
+    adsTrroSocialBar();
     };
 
     function copyLink(){
@@ -75,15 +122,21 @@ if (u.includes('id=') || u.includes('q=')){
     }
 
     function geraAppUrl(){
-        var numero = Math.floor(Math.random() * listaURL.length);
+        if (select && select.value==''){
+            var numero = Math.floor(Math.random() * listaURL.length);
+        }else{
+            var numero = select.value
+        }
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
         for(var i = 0; i < 2 ; i++){
         var numeroABC = Math.floor(Math.random() * abc.length);
         teg+=abc[numeroABC];
         }
-        if (ur.value.includes('qu.ax/')){
+        if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')){
             return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?q='+btoa(ur.value.replace('https://qu.ax/','').replace('http://qu.ax/',''));
+        }else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')){
+            return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?p='+ur.value.replace('https://qu.ax/','').replace('http://qu.ax/','').replace('.mp4','');
         }
         return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?id='+btoa(ur.value.replace('https://','').replace('http://',''));
     }
@@ -211,8 +264,8 @@ function startLisk2(){
         return;
     }
     setTimeout(() => {
-        startLisk2 = false
-        tempLisk2 = true;
+        startLisk = false;
+        //tempLisk2 = true;
     }, 6000);
 }
 
@@ -318,8 +371,8 @@ function adsBannes(banner){
     if (l=='en'){
       return "<div><p>No Post</p></div>";
     }
-   if (banner){
-       var d = document.getElementById('adsTerra');
+   if (banner[0]=='300x250'){
+       var d = document.getElementById(banner[1]);
        if (!d){
         adsBannes(banner);
         return;
@@ -338,18 +391,46 @@ function adsBannes(banner){
         sc2.type="text/javascript";
         sc2.src="//restlesscompeldescend.com/d936a0fb6388374b2e7bcf68e1935ca7/invoke.js";
         d.appendChild(sc2);
-   }else {
+   }else if (banner[0]=='native'){
+        var n = document.getElementById(banner[1]);
+        if (!n){
+            adsBannes(banner);
+            return;
+        }
+        var sc = document.createElement('script');
+        sc.setAttribute('async','asyns');
+        sc.setAttribute('data-cfasync','false');
+        sc.src='//restlesscompeldescend.com/fdfb3cd743d3c9b6bcf9a49da17fc358/invoke.js';
+        var div = document.createElement('div');
+        div.id='container-fdfb3cd743d3c9b6bcf9a49da17fc358';
+        n.appendChild(sc);
+        n.appendChild(div);
+   }else if (banner[0]=='booton'){
     setTimeout(() => {
         bootonBaneer();
-    },500);
+    },1000);
    }
+}
+
+function inputSelect(){
+    if (!listaURL){
+        return;
+    }
+    var inputSelect = `<select id="select" style="margin: 8px 0; width: 100%;">
+    <option value="">Select Dominio</option>`;
+    listaURL.forEach((item, index )=>{
+        inputSelect+=`<option value="${index}">Select ${item}</option>`;
+    });
+    inputSelect+='</select>';
+    return inputSelect;
+    
 }
 
 //bootonBaneer();
 function bootonBaneer(){
     var divAbs = document.createElement('div');
     divAbs.id='banerAdsCloce';
-    divAbs.style=`z-index: 3;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
+    divAbs.style=`z-index: 9999;background: #cacaca; position: fixed; bottom: 0; left: 0; width: 100%; box-sizing: border-box; border-radius: 6px; transition: all 0.5s; height: 110px;`;
     divAbs.innerHTML=`
     <div style="z-index: 2;background: #cacaca;font-size: 1rem;padding: 10px 10px 0 10px;border-radius: 6px;text-align: center;position: absolute;margin: -20px auto;left: 0;right: 0;width: 60px;bottom: 0;top: 0; height: 14px;" onclick="banerAdsCloce.style.bottom= banerAdsCloce.style.bottom === '0px' ? '-14%' : '0px';">X</div>
     <div id="bootonAds" style="padding: 10px 3px 3px; display: flex;
@@ -398,3 +479,19 @@ function bootonBaneer(){
     adsElement();
 }
 
+//adsTrroPopunder();
+//adsTrroSocialBar();
+
+function adsTrroPopunder(){
+    var sc = document.createElement('script');
+    sc.getAttribute('type','text/javascript');
+    sc.src='//restlesscompeldescend.com/b8/a1/b6/b8a1b6ae7ef02eaf85309ecde99893c2.js';
+    document.head.appendChild(sc)
+}
+
+function adsTrroSocialBar(){
+    var sc = document.createElement('script');
+    sc.getAttribute('type','text/javascript');
+    sc.src='//restlesscompeldescend.com/c9/88/d7/c988d79bf7d682154fdcc89691fc13cc.js';
+    document.body.appendChild(sc)
+}
