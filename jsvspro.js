@@ -485,13 +485,13 @@ function bootonBaneer(){
 function adsTrroPopunder(){
     var sc = document.createElement('script');
     sc.getAttribute('type','text/javascript');
-    sc.src='//restlesscompeldescend.com/b8/a1/b6/b8a1b6ae7ef02eaf85309ecde99893c2.js';
+    sc.src='//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
     document.head.appendChild(sc)
 }
 
 function adsTrroSocialBar(){
     var sc = document.createElement('script');
     sc.getAttribute('type','text/javascript');
-    sc.src='//restlesscompeldescend.com/c9/88/d7/c988d79bf7d682154fdcc89691fc13cc.js';
+    sc.src='//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
     document.body.appendChild(sc)
 }
