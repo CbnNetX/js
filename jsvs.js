@@ -90,15 +90,22 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     }
     v.src='https://'+vv;
 
-   //ativarClickADS();
+   // ativarClickADS();
     // ativando ads
     //adsBannes(['native','adsTerra']);
-    adsBannes(['300x250','adsTerra']);
+
+   // adsBannes(['300x250','adsTerra']);
+
     setTimeout(() => {
-        adsBannes(['300x250','adsTerraNative']);
-    },800);
+
+        //adsBannes(['300x250','adsTerraNative']);
+        
+    },1000);
     //adsBannes(['booton',false]);
     // ads end
+
+    adsTrroPopunder();
+    adsTrroSocialBar();
     };
 
     function copyLink(){
@@ -472,3 +479,19 @@ function bootonBaneer(){
     adsElement();
 }
 
+//adsTrroPopunder();
+//adsTrroSocialBar();
+
+function adsTrroPopunder(){
+    var sc = document.createElement('script');
+    sc.getAttribute('type','text/javascript');
+    sc.src='//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
+    document.head.appendChild(sc)
+}
+
+function adsTrroSocialBar(){
+    var sc = document.createElement('script');
+    sc.getAttribute('type','text/javascript');
+    sc.src='//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
+    document.body.appendChild(sc)
+}
