@@ -129,7 +129,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
         if (select && select.value==''){
             var numero = Math.floor(Math.random() * listaURL.length);
         }else{
-            var numero = select.value
+            var numero = select.value;
         }
         var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
         var teg = '';
