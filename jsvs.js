@@ -1,5 +1,5 @@
 const u = window.location.href;
-if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
+if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')){
         if (u.includes('app')){
             setTimeout(()=>{ 
                 if(document.getElementById('divx')){ 
@@ -88,6 +88,10 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
     if(q){
         vv = 'qu.ax/'+q+'.mp4';
     }
+    q = getUrl.searchParams.get("v");
+    if(q){
+        vv = 'cdn.videy.co/'+q+'.mp4';
+    }
     v.src='https://'+vv;
 
    // ativarClickADS();
@@ -138,6 +142,11 @@ if (u.includes('id=') || u.includes('q=') || u.includes('p=')){
         }else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')){
             return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?p='+ur.value.replace('https://qu.ax/','').replace('http://qu.ax/','').replace('.mp4','');
         }
+
+        if (ur.value.includes('cdn.videy.co/') && ur.value.includes('.mp4')){
+            return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?v='+ur.value.replace('https://cdn.videy.co/','').replace('http://cdn.videy.co/','').replace('.mp4','');
+        }
+
         return 'https://'+listaURL[numero]+'.blogspot.com/'+teg+'?id='+btoa(ur.value.replace('https://','').replace('http://',''));
     }
 
