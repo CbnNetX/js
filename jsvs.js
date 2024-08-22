@@ -66,7 +66,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             </style>
             <div id="adsTerra">
             </div>
-            <a class='btnanima' href='fb://www.facebook.com/share/g/oML9NaTFxeEvLaZX/' style='width: auto;padding: 5px;z-index: 999999999;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
+            <a class='btnanima' href='https://www.facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 999999999;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
             <div id='videoBox'>
             <video id="video" src="" controls></video>
             </div>
