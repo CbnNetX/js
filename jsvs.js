@@ -1,3 +1,21 @@
+/*
+<script>
+
+
+</script>
+
+<script src='https://cbnnetx.github.io/js/jsvs.js'/>
+<div style="display:none;">
+<script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+</div>
+*/
+var listaURL = [
+    'xa-xa',
+    'xa-xa1',
+    'xa-xa3'
+];
+
+
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
     if (u.includes('app')) {
@@ -66,7 +84,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             </style>
             <div id="adsTerra">
             </div>
-            <a class='btnanima' href='https://www.facebook.com/groups/1925174917947482' style='width: auto;padding: 5px;z-index: 999999999;margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
+            <a class='btnanima' href='https://www.facebook.com/groups/1925174917947482' style=' width: auto;padding: 5px; z-index: 2147483647; margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
             <div id='videoBox'>
             <video id="video" src="" controls></video>
             </div>
@@ -506,12 +524,29 @@ function adsTrroPopunder() {
     var sc = document.createElement('script');
     sc.getAttribute('type', 'text/javascript');
     sc.src = '//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
-    document.head.appendChild(sc)
+    document.head.appendChild(sc);
 }
 
 function adsTrroSocialBar() {
     var sc = document.createElement('script');
     sc.getAttribute('type', 'text/javascript');
     sc.src = '//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
-    document.body.appendChild(sc)
+    document.body.appendChild(sc);
 }
+
+
+window.onload = function(){
+    if (
+        document.referrer /**|| document.referrer==''*/
+        &&
+        !document.referrer.includes(window.location.hostname)
+        &&
+        !window.location.href.includes('grupvs')
+    ){
+        history.pushState(null,null, window.location.href);
+
+        window.addEventListener('popstate', (event)=>{
+            window.location.href='https://www.facebook.com/groups/1925174917947482';
+        });
+    }
+};
