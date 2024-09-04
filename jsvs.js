@@ -1,4 +1,19 @@
+/*
+<script>
 
+
+</script>
+
+<script src='https://cbnnetx.github.io/js/jsvs.js'/>
+<div style="display:none;">
+<script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+</div>
+*/
+var listaURL = [
+    'xa-xa',
+    'xa-xa1',
+    'xa-xa3'
+];
 
 
 const u = window.location.href;
@@ -522,7 +537,7 @@ function adsTrroSocialBar() {
 
 window.onload = function(){
     if (
-        document.referrer || document.referrer==''
+        (document.referrer || document.referrer=='')
         &&
         !document.referrer.includes(window.location.hostname)
         &&
