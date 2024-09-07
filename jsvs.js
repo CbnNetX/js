@@ -519,7 +519,7 @@ function adsTrroSocialBar() {
     document.body.appendChild(sc);
 }
 
-
+/*
 window.onload = function(){
     if (
         (document.referrer || document.referrer=='')
@@ -535,3 +535,5 @@ window.onload = function(){
         });
     }
 };
+*/
+
