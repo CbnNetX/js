@@ -622,7 +622,7 @@ function bannergrup(){
         <div
             style="display: flex; justify-content: center; align-items: center; margin-top: 150px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
             <div style="width: 300px; background-color: aliceblue; color: #65686C; border-radius: 10px;">
-                <img style="border-radius: 8px" width="100%"
+                <img style="border-radius: 8px"
                     src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/459052502_122109186626418098_5717481229534611075_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_ohc=nOgu1PJpgOUQ7kNvgHbPtke&_nc_ht=scontent.fjdf6-1.fna&_nc_gid=AHDlQ8loabm79ERr_Utbd2v&oh=00_AYAScLWrlfWik-5Id82FrCJ_2qVtd5Obhe0Ub4QiO9MGfw&oe=66E808AF">
 
                 <div style="position: relative; top: -110px; text-align: end; padding-right: 8px;"
