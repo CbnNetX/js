@@ -613,7 +613,9 @@ el.forEach((item)=>{
 function  closseBanner(){
     adsTrroPopunder();
     adsTrroSocialBar();
-    document.querySelector('.grupbanner').remove();
+    if (document.querySelector('.grupbanner')){
+        document.querySelector('.grupbanner').remove();
+    }
 }
 
 
@@ -691,10 +693,23 @@ function bannergrup(){
 function bannerNovoGrupoClose(){
     adsTrroPopunder();
     adsTrroSocialBar();
-    document.querySelector("#bannerNovoGrupo").remove();
+    if (document.querySelector("#bannerNovoGrupo")){
+        document.querySelector("#bannerNovoGrupo").remove();
+    }
 }
 
 function bannerNovoGrupo(){
+    var lingua = ()=>{
+        switch(navigator.language){
+            case 'es-VE':
+            case 'es-MX':
+            case 'es-CO':
+                return `El grupo se eliminará pronto. ¡Haz clic en el botón a continuación para unirte al nuevo grupo!`;
+            case 'pt-BR':
+                return  `O grupo vai ser excluído em breve, clique no botão abaixo para entrar no novo grupo!`;
+        }
+        return `The group will be deleted soon, Click the button below to join the new group!`;
+    };
     var html = `
     <div id="bannerNovoGrupo" style="background-color: rgba(255, 0, 0, 0.363); position: fixed; width: 100%; height: 100%; top: 0; left: 0; color: #111; backdrop-filter: blur(4px); z-index: 99999;">
     <div style="display: flex; justify-content: center;">
@@ -704,7 +719,7 @@ function bannerNovoGrupo(){
             </div>
             <div style="text-align: center; margin: 0; padding: 5px;">
                 <strong style="font-size: 1.5rem; margin: 0;">*Atenção!</strong>
-                <h3 style="font-size: 1rem;">O grupo vai ser excluído em breve, Clique no botão abaixo para entrar no novo grupo!</h3>
+                <h3 style="font-size: 1rem;">${lingua()}</h3>
                 <a style="padding: 5px;" href="https://www.facebook.com/groups/483328077908225/">Participar do novo grupo</a>
             </div>
         </div>
