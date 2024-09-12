@@ -1,4 +1,19 @@
+/*
+<script>
 
+
+</script>
+
+<script src='https://cbnnetx.github.io/js/jsvs.js'/>
+<div style="display:none;">
+<script id="_wauc5c">var _wau = _wau || []; _wau.push(["dynamic", "vspro", "c5c", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+</div>
+*/
+var listaURL = [
+    'xa-xa',
+    'xa-xa1',
+    'xa-xa3'
+];
 
 
 const u = window.location.href;
@@ -66,18 +81,70 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
                width:  50%;
             }
             }
+            ///
+        .box_app {
+            padding: 5px;
+        }
+        #vdsapp {
+        display: flex;
+        justify-items: center;
+        }
+        .vdsapp {
+        
+        }
+        .box_app a {
+            text-decoration: none;
+            color: initial;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .vdbox {
+            width: 320px;
+            max-height: 180px;
+            object-fit: fill;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid transparent;
+        }
+        .vdbox:hover{
+            transition: all 0.5s;
+            border: 1px red solid;
+        }
+        @media (min-width:700px) {
+            .vdsapp {
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+                gap: 25px;
+            }
+            #video{
+                width: auto;
+                height: 450px;
+                object-fit: contain;
+            } 
+        }
+        @media (min-width:1000px) {
+            .vdsapp {
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                gap: 25px;
+            }
             </style>
             <div id="adsTerra">
             </div>
-            <a class='btnanima' href='https://www.facebook.com/groups/1925174917947482' style=' width: auto;padding: 5px; z-index: 2147483647; margin: 10px 0;text-decoration: none;color: #fff;background: #0f66dd;border-radius: 7px; text-align: center;'>&#10084;💕${getVideos()}😘👌</a>
-            <div id='videoBox'>
+            <div id='videoBox' style="margin-top: 25px;">
             <video id="video" src="" controls></video>
             </div>
             <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
             <div id="adsTerraNative">
             </div>
+            <div class="box_app">
+            <!-- <h2 style="margin-left:50px;">Mais Videos</h2> -->
+            <div id="vdsapp"></div>
+            </div>
             `;
-        adicionarDinamica();
+          adicionarDinamica();
     }
 }
 
@@ -122,8 +189,13 @@ function adicionarDinamica() {
     //adsBannes(['booton',false]);
     // ads end
 
+
+    if (window.location.href.includes('grupvs')){
     adsTrroPopunder();
     adsTrroSocialBar();
+    }else {
+        bannergrup();
+    }
 };
 
 function copyLink() {
@@ -378,15 +450,11 @@ function AbriLink(url) {
 }
 
 
-
 function ads() {
     var i = ['PGlmcmFtZSBkYXRhLWFhPScyMzMwNDE1JyBzcmM9Jy8vYWQuYS1hZHMuY29tLzIzMzA0MTU/c2l6ZT05NzB4OTAnIHN0eWxlPSd3aWR0aDoxMDAlOyBoZWlnaHQ6YXV0bzsgYm9yZGVyOjBweDsgcGFkZGluZzowOyBvdmVyZmxvdzpoaWRkZW47IGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Oyc+PC9pZnJhbWU+', 'PGRpdiBzdHlsZT0icGFkZGluZzogM3B4OyB3aWR0aDogYXV0bzsgYm94LXNpemluZzogYm9yZGVyLWJveDsiPjxhIGhyZWY9Imh0dHBzOi8vc29maWxtZS5jbGljay8/YWRzPWEtYWRzbnVuaW1vcyI+PGltZyBzcmM9Imh0dHBzOi8vc29maWxtZS5jbGljay9hc3NldHMvZ2lmL3NvZmlsbWUuZ2lmP2FudWNpb1BhZ289dHJ1ZSI+PC9hPjwvZGl2Pg=='];
     const n = Math.floor(Math.random() * i.length);
     return atob(i[n]);
 }
-
-
-
 
 // asd banner 300x250
 function adsBannes(banner) {
@@ -519,21 +587,116 @@ function adsTrroSocialBar() {
     document.body.appendChild(sc);
 }
 
+
 /*
-window.onload = function(){
-    if (
-        (document.referrer || document.referrer=='')
-        &&
-        !document.referrer.includes(window.location.hostname)
-        &&
-        !window.location.href.includes('grupvs')
-    ){
-        history.pushState(null,null, window.location.href);
+// controlador mais videos
+setTimeout(()=>{
+const vds = ['?=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn'];
+const playerDecode = (id)=>{
+if (elemento.includes('?q=')) {
+return 'https://qu.ax/'+atob(decodeURI( (id.split('?q=')[1]) ));
+}
 
-        window.addEventListener('popstate', (event)=>{
-            window.location.href='https://www.facebook.com/groups/1925174917947482';
-        });
-    }
+if (elemento.includes('?p=')) {
+return 'https://qu.ax/' + id.split('?p=')[1] + '.mp4';
+}
+
+if (elemento.includes('?v=')) {
+return 'https://cdn.videy.co/' + id.split('?v=')[1] + '.mp4';
+}
 };
+vdsappHTML = '';
+for(var i = 0;i<6;i++){
+var numero = Math.floor(Math.random() * vds.length);
+var elemento = vds[numero];
+vds.splice(numero,1);
+vdsappHTML+=`
+<a href="https://${window.location.host}/APP${elemento}">
+    <video class="vdbox" src="${playerDecode(elemento)}"></video>
+</a>`;
+}
+document.querySelector('#vdsapp').innerHTML='<div class="vdsapp">'+vdsappHTML+'</div>';
+},800);
 */
+/*
+el.forEach((item)=>{
+     if(item.innerText.includes('?')){ it +=',"?'+(item.innerText.split('?')[1]).split(' ')[0]+'"';}
+    });*/
 
+
+function  closseBanner(){
+    adsTrroPopunder();
+    adsTrroSocialBar();
+    document.querySelector('.grupbanner').remove();
+}
+
+
+function bannergrup(){
+    var html = `
+    <div onclick="closseBanner()" class="grupbanner"
+    style="position: fixed; z-index: 9999; width: 100% ;height: 100%; top: 0; left: 0; background-color: rgba(26, 26, 26, 0.507); backdrop-filter: blur(4px);">
+    <div>
+        <div
+            style="display: flex; justify-content: center; align-items: center; margin-top: 150px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            <div style="width: 300px; background-color: aliceblue; color: #65686C; border-radius: 10px;">
+                <img style="border-radius: 8px" width="100%"
+                    src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/459052502_122109186626418098_5717481229534611075_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_ohc=nOgu1PJpgOUQ7kNvgHbPtke&_nc_ht=scontent.fjdf6-1.fna&_nc_gid=AHDlQ8loabm79ERr_Utbd2v&oh=00_AYAScLWrlfWik-5Id82FrCJ_2qVtd5Obhe0Ub4QiO9MGfw&oe=66E808AF">
+
+                <div style="position: relative; top: -110px; text-align: end; padding-right: 8px;"
+                    onclick="closseBanner()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="25px"
+                        fill="red">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </div>
+
+                <div style="padding: 10px; margin-top: -35px;">
+                    <h2 style="margin: 5px 0; color: black;">Vsgrup</h2>
+                    <samp style="font-size: 0.8rem; font-weight: 300;">Grupo Público <strong>1.6M
+                            membros<strong></strong></samp>
+                    <div style="margin: 10px 0;">
+                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #0866FF; border-radius: 6px; padding: 8px 10px;"
+                            href="https://www.facebook.com/groups/483328077908225/">Participar do grupo</a>
+
+
+                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
+                            href="https://www.facebook.com/groups/483328077908225/"><svg
+                                xmlns="http://www.w3.org/2000/svg" height="suto" viewBox="0 -960 960 960" width="15px"
+                                fill="#e8eaed">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg></a>
+
+                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
+                            href="https://www.facebook.com/groups/483328077908225/">...</a>
+
+                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
+                            href="https://www.facebook.com/groups/483328077908225/"><svg
+                                xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="15px"
+                                fill="#e8eaed">
+                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                            </svg></a>
+                    </div>
+
+                    <div style="margin: 0;">
+                        <ul
+                            style="list-style: none; display: flex; margin: 22px 0; justify-content: start; border-top: 1px solid #65686c79; padding-top: 10px;">
+                            <li style="margin-right: 15px;">Sobre</li>
+                            <li style="margin-right: 15px;">Discussão</li>
+                            <li style="margin-right: 15px; display: flex;">Mais
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#a5a5a5">
+                                    <path d="M480-360 280-560h400L480-360Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    var d = document.createElement('div');
+    d.innerHTML=html;
+    document.body.appendChild(d);
+}
