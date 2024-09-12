@@ -665,7 +665,7 @@ function bannergrup(){
                     <div style="margin: 0;">
                         <ul
                             style="list-style: none; display: flex; margin: 22px 0; justify-content: start; border-top: 1px solid #65686c79; padding-top: 10px;">
-                            <li style="margin-right: 15px;">Sobre</li>
+                            <li style="margin-right: 15px; font-size: 1.1rem;">Sobre</li>
                             <li style="margin-right: 15px;">Discussão</li>
                             <li style="margin-right: 15px; display: flex;">Mais
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
