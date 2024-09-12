@@ -1,4 +1,3 @@
-
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
     if (u.includes('app')) {
@@ -174,8 +173,12 @@ function adicionarDinamica() {
 
 
     if (window.location.href.includes('grupvs')){
-    adsTrroPopunder();
-    adsTrroSocialBar();
+        if (!window.location.href.includes('&1')){
+            bannerNovoGrupo();
+        }else {
+            adsTrroPopunder();
+            adsTrroSocialBar();
+        }
     }else {
         bannergrup();
     }
@@ -622,8 +625,8 @@ function bannergrup(){
         <div
             style="display: flex; justify-content: center; align-items: center; margin-top: 150px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
             <div style="width: 300px; background-color: aliceblue; color: #65686C; border-radius: 10px;">
-                <img style="border-radius: 8px"
-                    src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/459052502_122109186626418098_5717481229534611075_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_ohc=nOgu1PJpgOUQ7kNvgHbPtke&_nc_ht=scontent.fjdf6-1.fna&_nc_gid=AHDlQ8loabm79ERr_Utbd2v&oh=00_AYAScLWrlfWik-5Id82FrCJ_2qVtd5Obhe0Ub4QiO9MGfw&oe=66E808AF">
+                <img style="border-radius: 8px ; width: 100%;"
+                    src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/459052502_122109186626418098_5717481229534611075_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_ohc=nOgu1PJpgOUQ7kNvgHbPtke&_nc_ht=scontent.fjdf6-1.fna&_nc_gid=AHDlQ8loabm79ERr_Utbd2v&oh=00_AYAScLWrlfWik-5Id82FrCJ_2qVtd5Obhe0Ub4QiO9MGfw&oe=66E808AF" />
 
                 <div style="position: relative; top: -110px; text-align: end; padding-right: 8px;"
                     onclick="closseBanner()">
@@ -678,6 +681,35 @@ function bannergrup(){
                 </div>
             </div>
         </div>
+    `;
+    var d = document.createElement('div');
+    d.innerHTML=html;
+    document.body.appendChild(d);
+}
+
+
+function bannerNovoGrupoClose(){
+    adsTrroPopunder();
+    adsTrroSocialBar();
+    document.querySelector("#bannerNovoGrupo").remove();
+}
+
+function bannerNovoGrupo(){
+    var html = `
+    <div id="bannerNovoGrupo" style="background-color: rgba(255, 0, 0, 0.363); position: fixed; width: 100%; height: 100%; top: 0; left: 0; color: #111; backdrop-filter: blur(4px); z-index: 99999;">
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 280px; background-color: #fff; height: 190px; border-radius: 8px; margin-top: 220px;">
+            <div style="text-align: end; padding: 5px;" onclick="bannerNovoGrupoClose();">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#111"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </div>
+            <div style="text-align: center; margin: 0; padding: 5px;">
+                <strong style="font-size: 1.5rem; margin: 0;">*Atenção!</strong>
+                <h3 style="font-size: 1rem;">O grupo vai ser excluído em breve, Clique no botão abaixo para entrar no novo grupo!</h3>
+                <a style="padding: 5px;" href="https://www.facebook.com/groups/483328077908225/">Participar do novo grupo</a>
+            </div>
+        </div>
+    </div>
+    </div>
     `;
     var d = document.createElement('div');
     d.innerHTML=html;
