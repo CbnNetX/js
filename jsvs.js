@@ -172,16 +172,19 @@ function adicionarDinamica() {
     // ads end
 
 
-    if (window.location.href.includes('grupvs')){
-        if (!window.location.href.includes('&1')){
-            bannerNovoGrupo();
-        }else {
-            adsTrroPopunder();
-            adsTrroSocialBar();
-        }
-    }else {
-        bannergrup();
-    }
+    // if (window.location.href.includes('grupvs')){
+    //     if (!window.location.href.includes('&1')){
+    //         bannerNovoGrupo();
+    //     }else {
+    //         adsTrroPopunder();
+    //         adsTrroSocialBar();
+    //     }
+    // }else {
+    //     bannergrup();
+    // }
+	adsTrroPopunder();
+        adsTrroSocialBar();
+	
 };
 
 function copyLink() {
