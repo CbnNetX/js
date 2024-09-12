@@ -627,7 +627,7 @@ function bannergrup(){
 
                 <div style="position: relative; top: -110px; text-align: end; padding-right: 8px;"
                     onclick="closseBanner()">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="25px"
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25px"
                         fill="red">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -656,7 +656,7 @@ function bannergrup(){
 
                         <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
                             href="https://www.facebook.com/groups/483328077908225/"><svg
-                                xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="15px"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="15px"
                                 fill="#e8eaed">
                                 <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                             </svg></a>
