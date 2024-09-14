@@ -171,20 +171,20 @@ function adicionarDinamica() {
     //adsBannes(['booton',false]);
     // ads end
 
-
-    // if (window.location.href.includes('grupvs')){
-    //     if (!window.location.href.includes('&1')){
-    //         bannerNovoGrupo();
-    //     }else {
-    //         adsTrroPopunder();
-    //         adsTrroSocialBar();
-    //     }
-    // }else {
-    //     bannergrup();
-    // }
-	adsTrroPopunder();
-        adsTrroSocialBar();
-	
+/*
+    if (window.location.href.includes('grupvs')){
+        if (!window.location.href.includes('&1')){
+            bannerNovoGrupo();
+        }else {
+            adsTrroPopunder();
+            adsTrroSocialBar();
+        }
+    }else {
+        bannergrup();
+    }
+*/
+adsTrroPopunder();
+adsTrroSocialBar();
 };
 
 function copyLink() {
@@ -733,3 +733,24 @@ function bannerNovoGrupo(){
     d.innerHTML=html;
     document.body.appendChild(d);
 }
+
+//  rasteador da pagina!
+(()=>{
+    var div = document.createElement('div');
+    div.style='display:none';
+    if (window.location.host.includes('grup')){
+        var nameRastreio = 'vspro2';
+    }else {
+        var nameRastreio = 'vspro';
+    }
+    var sc =  document.createElement('script');
+    sc.id='_wauc5c';
+    sc.innerText=`var _wau = _wau || []; _wau.push(['dynamic', '${nameRastreio}', 'c5c', 'c4302bffffff', 'small']);`;
+    var sc2 =  document.createElement('script');
+    sc2.setAttribute('async','async');
+    sc2.src='//waust.at/d.js';
+    div.appendChild(sc);
+    div.appendChild(sc2);
+    document.body.appendChild(div);
+
+})();
