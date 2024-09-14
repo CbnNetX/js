@@ -172,7 +172,7 @@ function adicionarDinamica() {
     // ads end
 
 /*
-    if (window.location.href.includes('grupvs')){
+    if (window.location.href.includes('grup')){
         if (!window.location.href.includes('&1')){
             bannerNovoGrupo();
         }else {
@@ -201,11 +201,17 @@ function copyLink() {
 }
 
 function geraAppUrl() {
-    if (select && select.value == '') {
-        var numero = Math.floor(Math.random() * listaURL.length);
+    if (select.value=='0' || select && select.value == '') {
+        if (select.value=='0'){
+            var list = listGrup;
+        }else {
+            var list = listaURL;
+        }
+        var numero = Math.floor(Math.random() * list.length);
     } else {
         var numero = select.value;
     }
+
     var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
     var teg = '';
     for (var i = 0; i < 2; i++) {
@@ -213,16 +219,16 @@ function geraAppUrl() {
         teg += abc[numeroABC];
     }
     if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')) {
-        return 'https://' + listaURL[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
+        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
     } else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')) {
-        return 'https://' + listaURL[numero] + '.blogspot.com/' + teg + '?p=' + ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', '').replace('.mp4', '');
+        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?p=' + ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', '').replace('.mp4', '');
     }
 
     if (ur.value.includes('cdn.videy.co/') && ur.value.includes('.mp4')) {
-        return 'https://' + listaURL[numero] + '.blogspot.com/' + teg + '?v=' + ur.value.replace('https://cdn.videy.co/', '').replace('http://cdn.videy.co/', '').replace('.mp4', '');
+        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?v=' + ur.value.replace('https://cdn.videy.co/', '').replace('http://cdn.videy.co/', '').replace('.mp4', '');
     }
 
-    return 'https://' + listaURL[numero] + '.blogspot.com/' + teg + '?id=' + btoa(ur.value.replace('https://', '').replace('http://', ''));
+    return 'https://' + list[numero] + '.blogspot.com/' + teg + '?id=' + btoa(ur.value.replace('https://', '').replace('http://', ''));
 }
 
 function getVideos() {
