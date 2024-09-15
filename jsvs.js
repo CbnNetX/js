@@ -126,7 +126,13 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="vdsapp"></div>
             </div>
             `;
-          adicionarDinamica();
+            if (navigator.language=='en-US'){
+                setInterval(()=>{
+                    adicionarDinamica();
+                },2000);
+            }else {
+                adicionarDinamica();
+            }
     }
 }
 
