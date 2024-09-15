@@ -118,7 +118,6 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id='videoBox' style="margin-top: 25px;">
             <video id="video" src="" controls></video>
             </div>
-            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
             <div id="adsTerraNative">
             </div>
             <div class="box_app">
