@@ -116,6 +116,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="adsTerra">
             </div>
             <div id='videoBox' style="margin-top: 25px;">
+            <video id="video" src="${adicionarDinamica(true)}" controls></video>
             </div>
             <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
             <div id="adsTerraNative">
@@ -130,7 +131,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
     }
 }
 
-function adicionarDinamica() {
+function adicionarDinamica(indicador) {
     // var v = document.getElementById('video');
     // if (!v) {
     //     setTimeout(() => {
@@ -138,6 +139,7 @@ function adicionarDinamica() {
     //     }, 250);
     //     return;
     // }
+    if (indicador){
     var getUrl = new URL(u);
     var q = getUrl.searchParams.get("q");
     if (q) {
@@ -156,15 +158,16 @@ function adicionarDinamica() {
         vv = 'cdn.videy.co/' + q + '.mp4';
     }
     var videoSrc = 'https://' + vv;
+    return videoSrc;
+    }
 
 
-
-    //<video id="video" src="" controls></video>
-    var vd = document.createElement('video');
-    vd.id='video';
-    vd.src=videoSrc;
-    vd.setAttribute('controls','');
-    document.querySelector('#videoBox').appendChild(vd);
+    //<video id="video" src="${adicionarDinamica(true)}" controls></video>
+    // var vd = document.createElement('video');
+    // vd.id='video';
+    // vd.src='https://href.li/?'+videoSrc;
+    // vd.setAttribute('controls','');
+    // document.querySelector('#videoBox').appendChild(vd);
       
 
     // ativarClickADS();
