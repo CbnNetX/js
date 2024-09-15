@@ -189,8 +189,8 @@ function adicionarDinamica() {
         bannergrup();
     }
 */
-adsTrroPopunder();
-adsTrroSocialBar();
+//adsTrroPopunder();
+//adsTrroSocialBar();
 };
 
 function copyLink() {
