@@ -116,8 +116,8 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="adsTerra">
             </div>
             <div id='videoBox' style="margin-top: 25px;">
-            <video id="video" src="" controls></video>
             </div>
+            <button id="btnCopy" style="width: 100%; margin: 5px 0 55px 0; border: 0; background: #0552ff; color: #fff; padding: 10px; z-index: 2;" onclick="copyLink()">Copy Link</button>
             <div id="adsTerraNative">
             </div>
             <div class="box_app">
@@ -125,24 +125,19 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="vdsapp"></div>
             </div>
             `;
-            if (navigator.language=='en-US'){
-                setInterval(()=>{
-                   adicionarDinamica();
-                },5000);
-            }else {
-                adicionarDinamica();
-            }
+
+            adicionarDinamica();
     }
 }
 
 function adicionarDinamica() {
-    var v = document.getElementById('video');
-    if (!v) {
-        setTimeout(() => {
-            adicionarDinamica();
-        }, 250);
-        return;
-    }
+    // var v = document.getElementById('video');
+    // if (!v) {
+    //     setTimeout(() => {
+    //         adicionarDinamica();
+    //     }, 250);
+    //     return;
+    // }
     var getUrl = new URL(u);
     var q = getUrl.searchParams.get("q");
     if (q) {
@@ -160,7 +155,17 @@ function adicionarDinamica() {
     if (q) {
         vv = 'cdn.videy.co/' + q + '.mp4';
     }
-    v.src = 'https://' + vv;
+    var videoSrc = 'https://' + vv;
+
+
+
+    //<video id="video" src="" controls></video>
+    var vd = document.createElement('video');
+    vd.id='video';
+    vd.src=videoSrc;
+    vd.setAttribute('controls','');
+    document.querySelector('#videoBox').appendChild(vd);
+      
 
     // ativarClickADS();
     // ativando ads
@@ -746,7 +751,6 @@ function bannerNovoGrupo(){
 }
 
 //  rasteador da pagina!
-
 (()=>{
     var div = document.createElement('div');
     div.style='display:none';
@@ -766,4 +770,3 @@ function bannerNovoGrupo(){
     document.body.appendChild(div);
 
 })();
-
