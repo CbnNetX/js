@@ -63,7 +63,6 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
                width:  50%;
             }
             }
-            ///
         .box_app {
             padding: 5px;
         }
@@ -631,127 +630,6 @@ el.forEach((item)=>{
      if(item.innerText.includes('?')){ it +=',"?'+(item.innerText.split('?')[1]).split(' ')[0]+'"';}
     });*/
 
-
-function  closseBanner(){
-    adsTrroPopunder();
-    adsTrroSocialBar();
-    if (document.querySelector('.grupbanner')){
-        document.querySelector('.grupbanner').remove();
-    }
-}
-
-
-function bannergrup(){
-    var html = `
-    <div onclick="closseBanner()" class="grupbanner"
-    style="position: fixed; z-index: 9999; width: 100% ;height: 100%; top: 0; left: 0; background-color: rgba(26, 26, 26, 0.507); backdrop-filter: blur(4px);">
-    <div>
-        <div
-            style="display: flex; justify-content: center; align-items: center; margin-top: 150px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-            <div style="width: 300px; background-color: aliceblue; color: #65686C; border-radius: 10px;">
-                <img style="border-radius: 8px ; width: 100%;"
-                    src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/459052502_122109186626418098_5717481229534611075_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_ohc=nOgu1PJpgOUQ7kNvgHbPtke&_nc_ht=scontent.fjdf6-1.fna&_nc_gid=AHDlQ8loabm79ERr_Utbd2v&oh=00_AYAScLWrlfWik-5Id82FrCJ_2qVtd5Obhe0Ub4QiO9MGfw&oe=66E808AF" />
-
-                <div style="position: relative; top: -110px; text-align: end; padding-right: 8px;"
-                    onclick="closseBanner()">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="25px"
-                        fill="red">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg>
-                </div>
-
-                <div style="padding: 10px; margin-top: -35px;">
-                    <h2 style="margin: 5px 0; color: black;">Vsgrup</h2>
-                    <samp style="font-size: 0.8rem; font-weight: 300;">Grupo Público <strong>1.6M
-                            membros<strong></strong></samp>
-                    <div style="margin: 10px 0;">
-                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #0866FF; border-radius: 6px; padding: 8px 10px;"
-                            href="https://www.facebook.com/groups/483328077908225/">Participar do grupo</a>
-
-
-                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
-                            href="https://www.facebook.com/groups/483328077908225/"><svg
-                                xmlns="http://www.w3.org/2000/svg" height="suto" viewBox="0 -960 960 960" width="15px"
-                                fill="#e8eaed">
-                                <path
-                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
-                            </svg></a>
-
-                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
-                            href="https://www.facebook.com/groups/483328077908225/">...</a>
-
-                        <a style="color: aliceblue; font-size: 0.8rem; text-decoration: none; background-color: #acbfdf; border-radius: 6px; padding: 8px 10px;"
-                            href="https://www.facebook.com/groups/483328077908225/"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="15px"
-                                fill="#e8eaed">
-                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                            </svg></a>
-                    </div>
-
-                    <div style="margin: 0;">
-                        <ul
-                            style="list-style: none; display: flex; margin: 22px 0; justify-content: start; border-top: 1px solid #65686c79; padding-top: 10px; font-size: 1.1rem;">
-                            <li style="margin-right: 15px;">Sobre</li>
-                            <li style="margin-right: 15px;">Discussão</li>
-                            <li style="margin-right: 15px; display: flex;">Mais
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#a5a5a5">
-                                    <path d="M480-360 280-560h400L480-360Z" />
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    var d = document.createElement('div');
-    d.innerHTML=html;
-    document.body.appendChild(d);
-}
-
-
-function bannerNovoGrupoClose(){
-    adsTrroPopunder();
-    adsTrroSocialBar();
-    if (document.querySelector("#bannerNovoGrupo")){
-        document.querySelector("#bannerNovoGrupo").remove();
-    }
-}
-
-function bannerNovoGrupo(){
-    var lingua = ()=>{
-        switch(navigator.language){
-            case 'es-VE':
-            case 'es-MX':
-            case 'es-CO':
-                return `El grupo se eliminará pronto. ¡Haz clic en el botón a continuación para unirte al nuevo grupo!`;
-            case 'pt-BR':
-                return  `O grupo vai ser excluído em breve, clique no botão abaixo para entrar no novo grupo!`;
-        }
-        return `The group will be deleted soon, Click the button below to join the new group!`;
-    };
-    var html = `
-    <div id="bannerNovoGrupo" style="background-color: rgba(255, 0, 0, 0.363); position: fixed; width: 100%; height: 100%; top: 0; left: 0; color: #111; backdrop-filter: blur(4px); z-index: 99999;">
-    <div style="display: flex; justify-content: center;">
-        <div style="width: 280px; background-color: #fff; height: 190px; border-radius: 8px; margin-top: 220px;">
-            <div style="text-align: end; padding: 5px;" onclick="bannerNovoGrupoClose();">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#111"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            </div>
-            <div style="text-align: center; margin: 0; padding: 5px;">
-                <strong style="font-size: 1.5rem; margin: 0;">*Atenção!</strong>
-                <h3 style="font-size: 1rem;">${lingua()}</h3>
-                <a style="padding: 5px;" href="https://www.facebook.com/groups/483328077908225/">Participar do novo grupo</a>
-            </div>
-        </div>
-    </div>
-    </div>
-    `;
-    var d = document.createElement('div');
-    d.innerHTML=html;
-    document.body.appendChild(d);
-}
 
 //  rasteador da pagina!
 (()=>{
