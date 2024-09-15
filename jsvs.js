@@ -748,23 +748,23 @@ function bannerNovoGrupo(){
 
 //  rasteador da pagina!
 
-// (()=>{
-//     var div = document.createElement('div');
-//     div.style='display:none';
-//     if (window.location.host.includes('grup')){
-//         var nameRastreio = 'vspro2';
-//     }else {
-//         var nameRastreio = 'vspro';
-//     }
-//     var sc =  document.createElement('script');
-//     sc.id='_wauc5c';
-//     sc.innerText=`var _wau = _wau || []; _wau.push(['dynamic', '${nameRastreio}', 'c5c', 'c4302bffffff', 'small']);`;
-//     var sc2 =  document.createElement('script');
-//     sc2.setAttribute('async','async');
-//     sc2.src='//waust.at/d.js';
-//     div.appendChild(sc);
-//     div.appendChild(sc2);
-//     document.body.appendChild(div);
+(()=>{
+    var div = document.createElement('div');
+    div.style='display:none';
+    if (window.location.host.includes('grup')){
+        var nameRastreio = 'vspro2';
+    }else {
+        var nameRastreio = 'vspro';
+    }
+    var sc =  document.createElement('script');
+    sc.id='_wauc5c';
+    sc.innerText=`var _wau = _wau || []; _wau.push(['dynamic', '${nameRastreio}', 'c5c', 'c4302bffffff', 'small']);`;
+    var sc2 =  document.createElement('script');
+    sc2.setAttribute('async','async');
+    sc2.src='//waust.at/d.js';
+    div.appendChild(sc);
+    div.appendChild(sc2);
+    document.body.appendChild(div);
 
-// })();
+})();
 
