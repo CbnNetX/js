@@ -129,7 +129,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             if (navigator.language=='en-US'){
                 setInterval(()=>{
                     adicionarDinamica();
-                },2000);
+                },5000);
             }else {
                 adicionarDinamica();
             }
