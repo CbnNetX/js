@@ -231,16 +231,16 @@ function geraAppUrl() {
         teg += abc[numeroABC];
     }
     if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')) {
-        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
+        return list[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
     } else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')) {
-        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?p=' + ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', '').replace('.mp4', '');
+        return list[numero] + '.blogspot.com/' + teg + '?p=' + ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', '').replace('.mp4', '');
     }
 
     if (ur.value.includes('cdn.videy.co/') && ur.value.includes('.mp4')) {
-        return 'https://' + list[numero] + '.blogspot.com/' + teg + '?v=' + ur.value.replace('https://cdn.videy.co/', '').replace('http://cdn.videy.co/', '').replace('.mp4', '');
+        return list[numero] + '.blogspot.com/' + teg + '?v=' + ur.value.replace('https://cdn.videy.co/', '').replace('http://cdn.videy.co/', '').replace('.mp4', '');
     }
 
-    return 'https://' + list[numero] + '.blogspot.com/' + teg + '?id=' + btoa(ur.value.replace('https://', '').replace('http://', ''));
+    return list[numero] + '.blogspot.com/' + teg + '?id=' + btoa(ur.value.replace('https://', '').replace('http://', ''));
 }
 
 function getVideos() {
