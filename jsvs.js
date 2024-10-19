@@ -81,7 +81,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             margin-bottom: 15px;
         }
 
-        .vdbox {
+        .vdbox ,.iframe-video {
             width: 320px;
             max-height: 180px;
             object-fit: cover;
@@ -89,7 +89,8 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             border-top-right-radius: 8px;
             border: 1px solid transparent;
         }
-        .vdbox:hover{
+
+        .vdbox:hover , .iframe-video:hover{
             transition: all 0.5s;
             border: 1px red solid;
         }
@@ -125,7 +126,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="vdsapp"></div>
             </div>
             `;
-
+            add_mais();
             adicionarDinamica();
     }
 }
@@ -618,20 +619,38 @@ var numero = Math.floor(Math.random() * vds.length);
 var elemento = vds[numero];
 vds.splice(numero,1);
 vdsappHTML+=`
-<a href="https://${window.location.host}${elemento}">
-    <video class="vdbox" preload="metadata" muted src="${playerDecode(elemento)}"></video>
+<a class="card" href="https://${window.location.host}${elemento}">
+    <canvas class="iframe-video" width="auto" height="auto"></canvas>
+    <video class="vdbox" width="0" height="0" style="position: absolute; lefy: -1000px;" preload="metadata" muted src="${playerDecode(elemento)}"></video>
 </a>`;
 }
 document.querySelector('#vdsapp').innerHTML='<div class="vdsapp">'+vdsappHTML+'</div>';
 },800);
 
 // caregar perviu do video
-window.addEventListener('DOMContentLoaded', ()=>{
-    const video = document.querySelectorAll('video');
-    video.forEach(item=>{
-        item.load();
+// window.addEventListener('DOMContentLoaded', ()=>{
+    function add_mais(){
+    setTimeout(()=>{
+    var videos = document.querySelectorAll('.vdbox');
+    videos.forEach((video ,index)=>{
+        const canvas = videos[index].closest('.card').querySelector('.iframe-video');
+        const context = canvas.getContext('2d');
+        videos[index].addEventListener('loadeddata', ()=>{
+            setTimeout(()=>{
+            canvas.width = videos[index].videoWidth;
+            canvas.height = videos[index].videoHeight;
+            context.drawImage(videos[index], 0, 0, canvas.width, canvas.height );
+            videos[index].pause();
+            setTimeout(()=>{
+            document.querySelectorAll('.vdbox')[index].style.display="none";
+            },500);
+        },500);
     });
-});
+    videos[index].load();
+    });
+    },1000);
+}
+// });
 
 /*
 el.forEach((item)=>{
@@ -659,3 +678,4 @@ el.forEach((item)=>{
     document.body.appendChild(div);
 
 })();
+
