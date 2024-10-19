@@ -619,11 +619,19 @@ var elemento = vds[numero];
 vds.splice(numero,1);
 vdsappHTML+=`
 <a href="https://${window.location.host}${elemento}">
-    <video class="vdbox" preload="metadata" src="${playerDecode(elemento)}"></video>
+    <video class="vdbox" preload="metadata" muted src="${playerDecode(elemento)}"></video>
 </a>`;
 }
 document.querySelector('#vdsapp').innerHTML='<div class="vdsapp">'+vdsappHTML+'</div>';
 },800);
+
+// caregar perviu do video
+window.addEventListener('DOMContentLoaded', ()=>{
+    const video = document.querySelectorAll('video');
+    video.forEach(item=>{
+        item.load();
+    });
+});
 
 /*
 el.forEach((item)=>{
