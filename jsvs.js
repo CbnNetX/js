@@ -84,7 +84,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
         .vdbox {
             width: 320px;
             max-height: 180px;
-            object-fit: fill;
+            object-fit: cover;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
             border: 1px solid transparent;
@@ -121,7 +121,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="adsTerraNative">
             </div>
             <div class="box_app">
-            <!-- <h2 style="margin-left:50px;">Mais Videos</h2> -->
+            <h2 style="margin-left:50px;">Mais Videos:</h2>
             <div id="vdsapp"></div>
             </div>
             `;
@@ -595,10 +595,10 @@ function adsTrroSocialBar() {
 }
 
 
-/*
+
 // controlador mais videos
 setTimeout(()=>{
-const vds = ['?=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn','?p=VTXn'];
+const vds = ["?id=Mg==","?id=Mw==","?id=NA==","?id=NQ==","?id=Ng==","?id=Nw==","?id=OA==","?id=OQ==","?id=MTA=","?id=MTE=","?id=MTI=","?id=MTM=","?id=MTQ=","?id=MTU=","?id=MTY=","?id=MTc=","?id=MTg=","?id=MTk=","?id=MjA=","?id=MjE=","?id=MjI=","?id=Ly8=","?v=cV6eAnTX","?v=R8f4Dth5","?v=KVM8fHYw","?v=MX6VhIVk","?v=QFBp68GP","?v=vjUCUOsL","?v=okVnfm7P","?v=mJcGFNt1","?v=7x0siRCa","?v=1vjleeaf","?p=MHri","?p=gRiY","?p=oEnB","?p=NNU","?p=KMez","?p=pAKb","?p=WaGh","?p=wMmf","?q=RU9Dai5NUDQ=","?p=QMYZ","?p=DOuS","?q=RGZDVi5NUDQ=","?p=Flgv","?p=MLZL","?v=dPOUqVRX","?q=Qk9lQS53ZWJt","?p=YSMQ","?q=VnJyYy5NUDQ=","?p=Yvgb","?p=ptXA","?p=nMmm","?p=qht","?v=Gh2zcegs","?p=qmuw","?p=yRAV","?p=kAXE","?p=zQZB","?p=SbnS","?p=smup","?p=Sssy","?v=OiSS5YZk","?v=O2GTVSrs","?p=TYKj","?v=RzTPkrN9","?v=ONaFp7nh","?p=bjqM","?v=hWDCLFUY","?p=vUgh","?v=Xkbr8EKI","?p=oelz","?p=WlMo","?v=I42UX5ws","?p=RrLs","?p=aFqV","?v=Ru5ILn74","?p=MlB","?q=bUZnVS5NUDQ=","?v=DHG8ykA5","?p=cZHr","?v=1hjfvwnb","?p=fSpB","?v=xHTVljSB","?q=b1JGeS5NUDQ=","?p=XrJt","?v=igm3j8wK","?v=XQDPh3VF","?v=dL3U4Fwr","?v=OU7jDFUt","?q=V1JXci5NUDQ=","?v=bzfR6pEs","?p=gjyT","?p=OmjU","?p=eBmt","?p=CjtY","?p=ElUc","?p=iwhR","?p=Oaej","?p=awif","?p=urJi","?p=kbxp","?p=vmqs","?p=aulE","?p=FlXn","?p=qjKG","?p=KAVi","?p=gvEK","?p=ZoWp","?p=rGWm","?v=nKV971At","?v=DI7r9Hpu","?v=oc1KDPcQ","?p=sHDM","?v=mAhgAwZL","?v=syf0nOR8","?v=MNL7ax4C","?v=Gh2zcegs","?v=3aNJCJc6","?p=ZoWp","?v=9gvwxZXk","?v=se0IrCka","?v=f9yXguqb","?p=Cydz","?v=gl5Hb9qS","?v=dHeGblZa","?p=KZNn","?p=Pzn","?p=wspL","?p=mFcV","?v=DFqxKNbS","?v=REJb7HX2","?v=qlCR9uSW","?v=5jJApgcp","?p=GfRL","?p=psxh","?p=HFRY","?p=zeXy","?p=iMHc","?p=rAW","?p=thVb","?v=8XcmOWhd","?p=JKmP","?v=yI749AgY","?p=hvly","?p=nHbX","?p=lTbx","?v=7WAOd3Cy","?v=YLTSfwjX","?v=6lBr0Tlv","?v=1XqvNgwj","?v=pun7QIdp","?v=M2pS7LxO","?p=kWrH","?p=uicc","?v=xQjlWj3c","?v=v3dxq3fA","?v=kdh5wqq4","?v=9T7RNWIa","?v=HmcW0XnP","?v=0WekWYYu","?v=EpsNVnOo","?v=Z0tTDRTW","?v=fdV5HedH","?v=0WJnpO3U","?v=nT2IuHbC","?v=KcfO1noW","?v=x6r3lqec","?v=iHDuNVEf","?v=HSRSdPrT","?v=2iX7vl7E","?v=ugugwN4g","?v=UlvDcysa","?v=LyHIhDrx","?v=9KTpMmFQ","?p=MerU","?v=zxoJLN52","?v=zS3wWmnH","?p=qjKG","?v=HSRSdPrT","?p=QHwf","?v=pD5gC8Yp","?v=SGkSXMnf","?p=pvSE","?p=yZEV","?p=oOKy","?p=pAKb","?v=ZzARpB6v","?v=KC8YVPcK","?v=MXIPPMVL","?p=RQOL","?p=fnqS","?p=fxUv","?p=QWgG","?p=GTjs","?v=kmsYnu7d","?v=A9lyT16R","?v=OU7jDFUt","?v=s6NHvrNX","?q=aFdqZy53ZWJt","?v=pD5gC8Yp","?p=vmxY","?v=cq8vrIAX","?p=HSpR","?v=1hmxSL98","?v=eEqjuC0B","?q=RU9Dai5NUDQ=","?v=hrE1LsgZ","?v=J3WW72Ln","?p=gYxZ","?p=siKl","?v=8XcmOWhd","?v=FvQDrv3J","?v=E2ADWyZa","?p=moai","?v=DKEqXuCh","?v=GFMZdkkZ","?v=evmgdbMa","?v=BcsXRUfP","?v=KC8YVPcK","?p=zByi","?v=uCKxEiIA","?p=OBrk","?p=KFZd","?p=mDKg","?v=6NeCiQvm","?q=YWdNZy5NUDQ=","?v=BK89PXni","?v=LFcDkTsq","?q=WmpUVS53ZWJt","?v=KcfO1noW","?v=nT2IuHbC","?p=qBM","?p=TTtG","?p=wUFC","?v=32dt7Pvd","?p=ZpQ","?p=SDMu","?p=Qrbq","?v=7cdaQkFE","?v=uWL4Ky46","?p=EvvA","?p=cdYY","?v=jhqNFJtD","?v=jQDtQru5","?v=XqoBW0Re","?v=BXh8H4pS","?v=S7xz1vqe","?v=ypYo2zrp","?p=OjTn","?v=O2GTVSrs","?v=f9yXguqb","?p=FHGK","?v=ozaRecPt","?v=pycOtWDV","?p=mjG","?v=A0KNUwE0","?p=vcqv","?p=WHMC","?p=nWUs","?p=BTKV","?p=hJfi","?p=oRXk","?p=WETE","?v=WPDmCYwp","?p=PcY","?v=lRgEaVvx","?v=td2pmSuW","?p=TeYM","?p=qwsA","?p=iXVc","?p=JWym","?p=yrid","?p=NdWf","?v=q7F0xeaX","?p=uyev","?p=pHMh","?p=KHi","?v=8u2l4VgI","?p=DBZK","?p=Somq","?v=B41DDgoi","?v=8u2l4VgI","?p=SpRS","?p=HkPC","?p=vtGb","?q=a3dPay5tNHY=","?p=NZgB","?p=rBMz","?p=MOOC","?p=VsGk","?p=hySd","?p=zoFM","?p=ycWN","?p=GBVt","?p=cesV","?p=vUvf","?v=F9wUFbQR","?v=mzJpWANh","?p=gONT","?v=y8Xq6vq3","?v=BqaBpcC1","?v=c90KDILl","?v=cx5B9DEJ","?v=92cVowjY","?v=GSYVQYoj","?v=504c6I0M","?v=VsrbP7Wd","?v=BcsITKpc","?v=GOUazj0O","?v=Xkbr8EKI","?v=xHTVljSB","?p=eGpq","?v=DgVJ4YdI","?p=eRro","?p=yZEV","?p=kzWv","?p=yXVV","?p=oPBz","?v=O2Fu4dvq","?v=1vjleeaf","?v=mJcGFNt1","?q=bUZnVS5NUDQ=","?p=cZHr","?p=akLL","?p=eaYC","?p=xtvo","?v=e0QdTiD0","?v=sOs4LTUw","?q=WXNkdy5tNHY=","?p=PqXc","?v=Bh8u5rdd","?p=WaGh","?p=mAor","?p=AieX","?p=nLQz","?v=PeL2zOWx","?p=ngGv","?v=BcsITKpc","?v=HWPYJC9d","?p=SpnZ","?q=YmhGbS5NUDQ=","?v=FFQiKdpk","?v=4EoH54FX","?v=XqoBW0Re","?v=KC8YVPcK","?p=GFWb","?p=TlPn","?p=OjTn","?v=xHTVljSB","?v=vqKh8K5f","?p=RKmN","?v=phU3go1E","?v=zWYzkXr3","?p=Nbcx","?v=pun7QIdp","?p=AdMY","?p=LuDa","?v=r92WKIiB","?p=NuEA","?p=DUBv","?p=OUjM","?p=Ubxy","?v=2wHvziZj","?v=UlvDcysa","?p=sxlc","?v=FNTOjL2p","?p=FWhn","?p=SJXL","?v=ONj1SuoL","?p=nsjP","?v=J3WW72Ln","?v=cq8vrIAX","?p=MsDP","?p=HVxr","?v=yiSTiFIC","?p=TYKj","?v=k8Isq8AD","?v=6LPpM7Q6","?p=nDoM","?v=r77whRBt","?p=Nrou","?v=WmXpv2In","?p=OYvU","?v=b2kXR0TB","?p=MzjL","?v=yWbO9aNN","?p=iVZR","?p=bQMm","?v=F9wUFbQR","?v=LtDDGmEA","?p=Sboi","?p=Qnjz","?p=qwsA","?p=wpKr","?p=pvSE","?v=jsnoeKiY","?v=TPfGbvET","?p=tvYR","?p=jsro","?v=5r1kTxXn","?v=BXh8H4pS","?v=NMegkYpT","?v=S4BNdt1I","?v=Tu5HeKpH","?v=lbqJhcLv","?v=L4DXyGJs","?v=vqT3ixbc","?v=8Yjmn4tp","?v=pHErZQxj","?v=VqLAYQae","?v=q0TJrYfp","?v=b6FaaskN","?v=RsKwUOSk","?p=UrBu","?p=JxMU","?v=DgVJ4YdI","?p=mnQy","?v=c0nlTWOp","?v=OgYyPduF","?v=Gh2zcegs","?p=zYXM","?v=A230WmM6","?v=bkLsiGYU","?p=gXGF","?p=zPge","?p=SwOR","?p=SCDa","?p=QPRX","?v=qAqNL1C9","?p=ZPVk","?p=RdWz","?p=Mqu","?p=TRW","?p=vhhe","?p=xORz","?v=KPRQ3lZ7","?v=y6Nja3DW","?v=5JhHkCsm","?p=oybT","?v=ZyCQKdeh","?v=7ujmYEqy","?p=zYmS","?p=DkHA","?p=NTaO","?v=gF0EF93j","?p=xwGr","?p=bSWY","?v=gl5Hb9qS","?p=wspL","?v=Xz4LYtdm","?v=HwVZMAUe","?v=aLKzGngd","?v=IY9WgQos","?v=FxVJYbQD","?v=wmvfZVuQ","?p=Flgv","?p=Nbcx","?p=GvZV","?p=NSyH","?v=TpEii4G2","?p=EvvA","?p=RKWC","?p=khCh","?p=QPoi","?v=Px0XmzCU","?q=b1JGeS5NUDQ=","?v=F06aBxg6","?p=uRqU","?p=ptXA","?v=cV6eAnTX","?p=gQRW","?p=lTbx","?p=WPuO","?v=F4v1xDXs","?p=kizh","?v=f9yXguqb","?p=ufyK","?v=ypC5YnPo","?p=vDjS","?v=k8Isq8AD","?p=gYxZ","?p=fljV","?v=YmFqHOMS","?p=baZT","?p=yAEz","?v=URFR257x","?v=FlCQOkSB","?p=oOKy","?p=DtQj","?p=TJnS","?p=LVNW","?p=FPQR","?p=OBrk","?v=6HVC8MVi","?q=UE5CLm00dg==","?p=GFWb","?v=A230WmM6","?p=yZEV","?p=vNFM","?p=brZl","?v=ONaFp7nh","?p=FyBV","?v=llkfF5Ja","?v=KOAF73KV","?p=cdnj","?v=zjjjyE9L","?v=0fMTCwpZ","?v=ZojAcabo","?v=VsrbP7Wd","?v=hxpSjl4V","?v=9yJMrs6y","?v=DHIPz7ea","?v=kTzib2Yp","?v=3ajRH2c8","?p=ZmVg","?v=DLG33Mvw","?q=a2paci53ZWJt","?p=SABb","?p=PcY","?q=ektYVS5NUDQ=","?p=Adpw","?p=TTtG","?p=urJi","?p=nHbX","?p=uRqU"];
 const playerDecode = (id)=>{
 if (elemento.includes('?q=')) {
 return 'https://qu.ax/'+atob(decodeURI( (id.split('?q=')[1]) ));
@@ -618,13 +618,13 @@ var numero = Math.floor(Math.random() * vds.length);
 var elemento = vds[numero];
 vds.splice(numero,1);
 vdsappHTML+=`
-<a href="https://${window.location.host}/APP${elemento}">
-    <video class="vdbox" src="${playerDecode(elemento)}"></video>
+<a href="https://${window.location.host}${elemento}">
+    <video class="vdbox" preload="metadata" src="${playerDecode(elemento)}"></video>
 </a>`;
 }
 document.querySelector('#vdsapp').innerHTML='<div class="vdsapp">'+vdsappHTML+'</div>';
 },800);
-*/
+
 /*
 el.forEach((item)=>{
      if(item.innerText.includes('?')){ it +=',"?'+(item.innerText.split('?')[1]).split(' ')[0]+'"';}
