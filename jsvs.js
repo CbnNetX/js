@@ -1,6 +1,4 @@
 
-
-
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
     if (u.includes('app')) {
@@ -36,16 +34,16 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
                 // margin: 0 5px 80px;
                 height: 100%;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 color: #fff;
                 background: #111;
+                height: 100vh;
 
             }
             </style>
             <div>
-            <video style=" box-sizing: border-box; width: 100%; height: 99vh;" controls ><source src="${adicionarDinamica(true)}"></video>
+            <video style=" box-sizing: border-box; width: 100%; height: auto;" controls ><source src="${adicionarDinamica(true)}"></video>
             </div>`;
             adicionarDinamica();
             ads_start();
