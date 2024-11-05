@@ -228,7 +228,7 @@ function geraAppUrl() {
     var teg = '';
     for (var i = 0; i < 2; i++) {
         var numeroABC = Math.floor(Math.random() * abc.length);
-        teg += abc[numeroABC];
+        //teg += abc[numeroABC];
     }
     if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')) {
         return list[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
