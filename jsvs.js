@@ -122,7 +122,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             <div id="adsTerraNative">
             </div>
             <div class="box_app">
-            <--! <h2 style="margin-left:50px;">Mais Videos:</h2> -->
+            <!-- <h2 style="margin-left:50px;">Mais Videos:</h2> -->
             <div id="vdsapp"></div>
             </div>
             `;
