@@ -1,22 +1,3 @@
-/*
-<script>
-var listaURL = [
-
- ];
-var listGrup = [
-   'vsg01'
-]
-
-<script src='https://cbnnetx.github.io/js/vsg.js'></script>
-
-*/
-var listaURL = [
-
- ];
-var listGrup = [
-   'vsg01'
-]
-
 
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
