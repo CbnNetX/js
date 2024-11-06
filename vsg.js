@@ -24,7 +24,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             }
             </style>
             <div>
-            <video preload="none" style="box-sizing: border-box; width: 100%; height: auto;" controls >
+            <video style="box-sizing: border-box; width: 100%; height: auto;" controls >
             <source src="${adicionarDinamica(true)}">
             </video>
             </div>`;
@@ -60,15 +60,18 @@ function adicionarDinamica(indicador) {
 
 
 function ads_start(){
-    adsTrroSocialBar();
+    adsTrroPopunder();
+
+    // adsTrroSocialBar();
 }
 
-function adsTrroSocialBar() {
+function adsTrroPopunder() {
     var sc = document.createElement('script');
     sc.getAttribute('type', 'text/javascript');
-    sc.src = '//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
-    document.body.appendChild(sc);
+    sc.src = '//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
+    document.head.appendChild(sc);
 }
+
 
 
 //  rasteador da pagina!
