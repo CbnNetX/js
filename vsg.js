@@ -1,3 +1,23 @@
+/*
+<script>
+var listaURL = [
+
+ ];
+var listGrup = [
+   'vsg01'
+]
+
+<script src='https://cbnnetx.github.io/js/vsg.js'></script>
+
+*/
+var listaURL = [
+
+ ];
+var listGrup = [
+   'vsg01'
+]
+
+
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
     if (u.includes('app')) {
@@ -122,17 +142,17 @@ function inputSelect() {
 
 
 function ads_start(){
-    adsTrroPopunder();
+    //adsTrroPopunder();
     adsTrroSocialBar();
 
 }
 
-function adsTrroPopunder() {
-    var sc = document.createElement('script');
-    sc.getAttribute('type', 'text/javascript');
-    sc.src = '//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
-    document.head.appendChild(sc);
-}
+// function adsTrroPopunder() {
+//     var sc = document.createElement('script');
+//     sc.getAttribute('type', 'text/javascript');
+//     sc.src = '//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
+//     document.head.appendChild(sc);
+// }
 
 function adsTrroSocialBar() {
     var sc = document.createElement('script');
