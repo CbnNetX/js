@@ -1,9 +1,26 @@
-
-
-
 const u = window.location.href;
 if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v=')) {
-    if (u.includes('app')) {} else {
+    if (u.includes('app')) {
+        setTimeout(() => {
+            if (document.getElementById('divx')) {
+                divx.remove();
+            }
+        }, 100);
+        document.body.innerHTML = `
+            <div style="width: 100%; padding: 10px; box-sizing: border-box;" bis_skin_checked="1">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="url" id="ur" placeholder="URL">
+             <input style="width: 98%; margin: 5px; padding: 5px; box-sizing: border-box;" type="text" id="ii" placeholder="URL Final">
+             ${inputSelect()}
+            <input style="width: 100%; margin-bottom: 5px; padding: 5px; box-sizing: border-box;" type="button" id="b" value="ok">
+             </div>
+             `;
+        document.body.onclick = "";
+        b.onclick = () => {
+            if (ur.value != "" && ur.value != undefined) {
+                ii.value = geraAppUrl();
+            }
+        }
+    } else {
         document.body.innerHTML = `
             <style>
             body, div, html, video {
@@ -57,12 +74,57 @@ function adicionarDinamica(indicador) {
     }
 };
 
+function geraAppUrl() {
+    if (select.value=='0' || select && select.value == '') {
+        if (select.value=='0'){
+            var list = listGrup;
+        }else {
+            var list = listaURL;
+        }
+        var numero = Math.floor(Math.random() * list.length);
+    } else {
+        var numero = select.value;
+    }
+
+    var abc = '123456789qwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNMasdfghjklzxcvbnm'.split('');
+    var teg = '';
+    for (var i = 0; i < 2; i++) {
+        var numeroABC = Math.floor(Math.random() * abc.length);
+        //teg += abc[numeroABC];
+    }
+    if (ur.value.includes('qu.ax/') && !ur.value.includes('.mp4')) {
+        return list[numero] + '.blogspot.com/' + teg + '?q=' + btoa(ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', ''));
+    } else if (ur.value.includes('qu.ax/') && ur.value.includes('.mp4')) {
+        return list[numero] + '.blogspot.com/' + teg + '?p=' + ur.value.replace('https://qu.ax/', '').replace('http://qu.ax/', '').replace('.mp4', '');
+    }
+
+    if (ur.value.includes('cdn.videy.co/') && ur.value.includes('.mp4')) {
+        return list[numero] + '.blogspot.com/' + teg + '?v=' + ur.value.replace('https://cdn.videy.co/', '').replace('http://cdn.videy.co/', '').replace('.mp4', '');
+    }
+
+    return list[numero] + '.blogspot.com/' + teg + '?id=' + btoa(ur.value.replace('https://', '').replace('http://', ''));
+}
+
+
+function inputSelect() {
+    if (!listaURL) {
+        return;
+    }
+    var inputSelect = `<select id="select" style="margin: 8px 0; width: 100%;">
+    <option value="">Select Dominio</option>`;
+    listaURL.forEach((item, index) => {
+        inputSelect += `<option value="${index}">Select ${item}</option>`;
+    });
+    inputSelect += '</select>';
+    return inputSelect;
+
+}
 
 
 function ads_start(){
     adsTrroPopunder();
+    adsTrroSocialBar();
 
-    // adsTrroSocialBar();
 }
 
 function adsTrroPopunder() {
@@ -72,6 +134,12 @@ function adsTrroPopunder() {
     document.head.appendChild(sc);
 }
 
+function adsTrroSocialBar() {
+    var sc = document.createElement('script');
+    sc.getAttribute('type', 'text/javascript');
+    sc.src = '//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
+    document.body.appendChild(sc);
+}
 
 
 //  rasteador da pagina!
@@ -92,4 +160,5 @@ function adsTrroPopunder() {
     div.appendChild(sc);
     div.appendChild(sc2);
     document.body.appendChild(div);
+
 })();
