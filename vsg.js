@@ -41,7 +41,7 @@ if (u.includes('?') || u.includes('q=') || u.includes('p=') || u.includes('v='))
             }
             </style>
             <div>
-            <video style=" box-sizing: border-box; width: 100%; height: auto;" controls >
+            <video preload="none" style="box-sizing: border-box; width: 100%; height: auto;" controls >
             <source src="${adicionarDinamica(true)}">
             </video>
             </div>`;
