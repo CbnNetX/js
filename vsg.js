@@ -122,9 +122,9 @@ function inputSelect() {
 
 
 function ads_start(){
-    adsTrroPopunder();
-    adsTrroSocialBar();
-
+    //adsTrroPopunder();
+    //adsTrroSocialBar();
+    adsMonetag();
 }
 
 function adsTrroPopunder() {
@@ -140,6 +140,17 @@ function adsTrroSocialBar() {
     sc.src = '//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
     document.body.appendChild(sc);
 }
+
+function adsMonetag() {
+    // <script src="https://alwingulla.com/88/tag.min.js" data-zone="119522" async data-cfasync="false"></script>
+    var sc = document.createElement('script');
+    sc.getAttribute('data-zone', '119522');
+    sc.getAttribute('data-cfasync', 'false');
+    sc.getAttribute('async', '');
+    sc.src = 'https://alwingulla.com/88/tag.min.js';
+    document.body.appendChild(sc);
+}
+
 
 
 //  rasteador da pagina!
