@@ -129,14 +129,14 @@ function ads_start(){
 
 function adsTrroPopunder() {
     var sc = document.createElement('script');
-    sc.getAttribute('type', 'text/javascript');
+    sc.setAttribute('type', 'text/javascript');
     sc.src = '//dialectamplifydocumentation.com/78/90/e5/7890e52bda40ef30c34c238c014706c4.js';
     document.head.appendChild(sc);
 }
 
 function adsTrroSocialBar() {
     var sc = document.createElement('script');
-    sc.getAttribute('type', 'text/javascript');
+    sc.setAttribute('type', 'text/javascript');
     sc.src = '//dialectamplifydocumentation.com/3f/d6/1c/3fd61c9d67c0d4b54ef8af1fe099b5e0.js';
     document.body.appendChild(sc);
 }
@@ -145,9 +145,9 @@ function adsMonetag() {
     // <script src="https://alwingulla.com/88/tag.min.js" data-zone="119525" async data-cfasync="false"></script>
     var sc = document.createElement('script');
     sc.id='ads';
-    sc.getAttribute('data-zone', '119525');
-    sc.getAttribute('data-cfasync', 'false');
-    sc.getAttribute('async', '');
+    sc.setAttribute('data-zone', '119525');
+    sc.setAttribute('data-cfasync', 'false');
+    sc.setAttribute('async', '');
     sc.src = 'https://alwingulla.com/88/tag.min.js';
     document.head.appendChild(sc);
 }
