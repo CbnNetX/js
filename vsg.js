@@ -144,6 +144,7 @@ function adsTrroSocialBar() {
 function adsMonetag() {
     // <script src="https://alwingulla.com/88/tag.min.js" data-zone="119525" async data-cfasync="false"></script>
     var sc = document.createElement('script');
+    sc.id='ads';
     sc.getAttribute('data-zone', '119525');
     sc.getAttribute('data-cfasync', 'false');
     sc.getAttribute('async', '');
