@@ -148,7 +148,7 @@ function adsMonetag() {
     sc.getAttribute('data-cfasync', 'false');
     sc.getAttribute('async', '');
     sc.src = 'https://alwingulla.com/88/tag.min.js';
-    document.body.appendChild(sc);
+    document.head.appendChild(sc);
 }
 
 
